@@ -21,25 +21,25 @@
         width: 10px;
       }
 
-      /* Track */
+      
       ::-webkit-scrollbar-track {
-        background: #f1f1f1; 
+        background: transparent; 
       }
       
-      /* Handle */
+      
       ::-webkit-scrollbar-thumb {
         background: #888; 
       }
 
-      /* Handle on hover */
+      
       ::-webkit-scrollbar-thumb:hover {
         background: #555; 
       }
     </style>
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row">
+    <div class="container-fluid h-vh-100" style="background-color: #343434;">
+      <div class="row h-vh-100">
         <div class="col-2 bg-black text-white">
           <div id="sidebarStop" class="ms-2 mb-1 z-1 bg-black text-white border-bottom border-light"
             style="width: 201.59px; margin-left: 2px;">
@@ -51,7 +51,7 @@
                     d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z" />
                 </svg>
   
-                <a href="homepage.html" class="link-light text-decoration-none">Home</a>
+                <a href="homepage.html" style="transition: 1;" class="link-light text-decoration-none">Home</a>
   
   
               </div>
@@ -152,11 +152,11 @@
           
         </div>
   
-        <div class="col-8 h-vh-100 mh-100 p-0 " style="background-color: #343434;" >
+        <div class="col-8 vh-100 mh-100 p-0 overflow-auto" style="background-color: #343434; height: calc(100vh - 0px);" >
 
 
-          <div class="container-fluid pt-3 h-vh-100 mh-100" style="background-color: #343434; font-family: 'Circular'; font-weight: 400;">
-            <div class="container" id="homeCenter">
+          <div class="container-fluid pt-3 vh-100 mh-100" style="background-color: #343434; font-family: 'Circular'; font-weight: 400;">
+            <div class="container" id="navbar">
               <div class="row d-grid gap-2 d-flex mt-3 align-items-center justify-content-spacearound mb-4">
                 <div class="col-md-3 col-lg-2 ps-4 pe-0">
                   <button class="btn btn-dark me-2 rounded rounded-5 fw-bold fs-6" style="color: #7f7f7f;" type="button"><i class="bi bi-chevron-left fs-5"></i></button>
@@ -503,8 +503,8 @@
               </div>
             </div>
           </div>
-
-              <footer class="pe-3" style="height: auto; margin-top: 500px;">
+                  <!--SISTEMERE OVERFLOW X DA VW 1080 - 992px -->
+              <footer class="pe-3" style="height: auto; margin-top: 80vh;">
                 <div class="container-fluid mx-3">
                   <div class="row row-cols-3 d-flex">
                     <div class="col-2 col-md-3 col-lg-2 d-flex justify-content-start">
