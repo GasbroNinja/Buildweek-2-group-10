@@ -10,14 +10,38 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/circular-font.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    html {
+      background-color: #343434;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #474646;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #302e2e;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #181717;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="container-fluid bg-dark bg-gradient position-absolute z-n1">
+  <div class="container-fluid position-absolute">
     <div class="row">
-      <div class="col-2 bg-black text-white z-1">
-        <div id="sidebarStop" class="ms-2 mb-1 bg-black text-white border-bottom border-light"
-          style="width: 205.59px;">
+
+      <div class="col-md-2 d-none d-md-block bg-black text-white">
+        <div id="sidebarStop" class="ms-2 mb-1 text-white border-bottom border-light">
           <div id="home" class="my-3">
             <div class="d-flex">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -84,57 +108,58 @@
           </div>
         </div>
 
-       
+        <div id="sidebarScroll" style="height: calc(100vh - 200px);" class="my-3 opacity-75 overflow-auto">
 
+          <div>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
 
-        <div id="sidebarScroll" class="my-3 opacity-75 overflow-auto" style="height: (calc(100vh - 200px));">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
 
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
 
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
 
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
 
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
 
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
 
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
 
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
 
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
 
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-
-          <p>Lorem ipsum dolor sit amet.</p>
-
-
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
         </div>
+
+
       </div>
 
-      <div class="col-8 p-0 ">
+      <div class="col-md-8 p-0">
         <div class=" fixed-top bg-image z-n1"
           style="background-image: url(assets/imgs/main/imagesyellowcard.jpg); height: 40vh; ">
 
         </div>
 
-        <div class="d-flex flex-column p-2 bg-transparent z-1 text-white" style="height: 100vh;">
+        <div class="d-flex flex-column p-2 bg-transparent z-0 text-white overflow-y-auto overflow-x-hidden"
+          style="height: 100vh;">
           <div class="d-flex bg-transparent align-items-end p-0" style="height:40vh;">
             <div>
               <div class="d-flex">
@@ -145,7 +170,7 @@
                 </svg>
                 <p>Artista verificato</p>
               </div>
-              <h1 class="fw-bold" style="font-size: 5rem;" >Yellowcard</h1>
+              <h1 class="fw-bold" style="font-size: 5rem;">Yellowcard</h1>
               <p class="">3.433.158 ascoltatori mensili</p>
             </div>
           </div>
@@ -164,32 +189,61 @@
             <h3>Popolari</h3>
             <div class="popular">
               <div class="row">
-                <div class="col-4">kbg</div>
-                <div class="col-4">mdbfweh</div>
-                <div class="col-4">kebjf</div>
+                <div class="col-md-4 col-12 d-flex">
+                  <p>1</p>
+                  <img src="assets/imgs/main/image-12.jpg" alt="" class="mx-3" style=" height:35px">
+                  <p>Ocean Avenue</p>
+                </div>
+                <div class="col-md-4 d-none d-md-block">123.456.789</div>
+                <div class="col-md-4 d-none d-md-block">3:19</div>
               </div>
               <div class="row">
-                <div class="col-4">kbg</div>
-                <div class="col-4">mdbfweh</div>
-                <div class="col-4">kebjf</div>
+                <div class="col-md-4 col-12 d-flex">
+                  <p>1</p>
+                  <img src="assets/imgs/main/image-12.jpg" alt="" class="mx-3" style=" height:35px">
+                  <p>Ocean Avenue</p>
+                </div>
+                <div class="col-md-4 d-none d-md-block">123.456.789</div>
+                <div class="col-md-4 d-none d-md-block">3:19</div>
               </div>
               <div class="row">
-                <div class="col-4">kbg</div>
-                <div class="col-4">mdbfweh</div>
-                <div class="col-4">kebjf</div>
+                <div class="col-md-4 col-12 d-flex">
+                  <p>1</p>
+                  <img src="assets/imgs/main/image-12.jpg" alt="" class="mx-3" style=" height:35px">
+                  <p>Ocean Avenue</p>
+                </div>
+                <div class="col-md-4 d-none d-md-block">123.456.789</div>
+                <div class="col-md-4 d-none d-md-block">3:19</div>
               </div>
               <div class="row">
-                <div class="col-4">kbg</div>
-                <div class="col-4">mdbfweh</div>
-                <div class="col-4">kebjf</div>
+                <div class="col-md-4 col-12 d-flex">
+                  <p>1</p>
+                  <img src="assets/imgs/main/image-12.jpg" alt="" class="mx-3" style=" height:35px">
+                  <p>Ocean Avenue</p>
+                </div>
+                <div class="col-md-4 d-none d-md-block">123.456.789</div>
+                <div class="col-md-4 d-none d-md-block">3:19</div>
               </div>
+
+              <div class="row">
+                <div class="col-md-4 col-12 d-flex">
+                  <p>1</p>
+                  <img src="assets/imgs/main/image-12.jpg" alt="" class="mx-3" style=" height:35px">
+                  <p>Ocean Avenue</p>
+                </div>
+                <div class="col-md-4 d-none d-md-block">123.456.789</div>
+                <div class="col-md-4 d-none d-md-block">3:19</div>
+              </div>
+
+
+
             </div>
           </div>
 
         </div>
 
       </div>
-      <div class="col-2 bg-black text-white align-items-center">
+      <div class="col-md-2 d-none d-md-block bg-black text-white align-items-center">
         <div class="d-flex justify-content-between">
           <div>
             <h5>Attività amici</h5>
@@ -236,4 +290,3 @@
 </body>
 
 </html>
-
