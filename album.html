@@ -14,8 +14,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
   </head>
   <body>
-    <div class="container-fluid vh-100 position-absolute z-0">
-      <div class="container pb-5" style="background-color: #dbb950">
+    <div class="container-fluid">
+      <div
+        class="container pb-5"
+        style="
+          background: radial-gradient(
+            circle,
+            rgba(196, 174, 77, 1) 9%,
+            rgba(215, 185, 76, 1) 52%,
+            rgba(157, 125, 13, 1) 100%
+          );
+        "
+      >
         <div class="container" id="albumCenter">
           <div class="row d-grid gap-2 d-flex mt-3 align-items-center justify-content-spacearound mb-4">
             <div class="col-2 ps-4 pe-0">
@@ -37,90 +47,134 @@
               ></span>
             </div>
           </div>
-          <div class="container d-flex">
+          <div class="container d-flex align-items-end">
+            <!-- album h2, paragrafi e immagini+++++++++++ -->
             <img
-              class="m-2 shadow mb-5 bg-body-tertiary"
+              class="m-2 shadow-lg"
               src="assets/imgs/search/avatar-giovent-brucata.webp"
-              width="200px"
+              width="190px"
               height="auto"
-              src="assets/imgs/avatar.jpeg"
               alt="avatar"
             />
-
-            <p class="mt-3 badge">ALBUM</p>
-            <h2 class="fw-bold" style="color: white">Gioventù brucata</h2>
-            <div class="d-flex flex align-center">
-              <img
-                class="rounded-circle"
-                src="assets/imgs/search/Pinguini-Tattici-Nucleari group.jpg"
-                alt=""
-                width="20px"
-                height="20px"
-              />
-              <span class="badge fs-6">pinguini tattici nucleari</span>
-              <span class="badge">·</span>
-              <span class="badge">2017</span>
-              <span class="badge">·</span>
-              <span class="badge">12 brani,</span>
-              <span class="badge" style="color: gray">53 min 20 sec.</span>
+            <div class="mt-5 p-2">
+              <p class="badge">ALBUM</p>
+              <h2 class="fw-bold" style="font-size: 5rem; color: white">Gioventù brucata</h2>
+              <div class="d-flex flex align-center">
+                <img
+                  class="rounded-circle"
+                  src="assets/imgs/search/Pinguini-Tattici-Nucleari group.jpg"
+                  alt=""
+                  width="20px"
+                  height="20px"
+                />
+                <span>
+                  <span style="color: white" class="fw-semibold ms-2">Pinguini Tattici Nucleari</span>
+                  <span style="color: white" class="fw-semibold">·</span>
+                  <span style="color: white" class="fw-semibold">2017</span>
+                  <span style="color: white" class="fw-semibold">·</span>
+                  <span style="color: white" class="fw-semibold">12 brani,</span>
+                  <span class="fw-semibold" style="color: gray"> 53 min 20 sec.</span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="container">
+
+      <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div
+        class="container p-5"
+        style="background: linear-gradient(0deg, rgba(2, 0, 36, 1) 25%, rgba(96, 85, 36, 1) 97%)"
+      >
         <div class="d-flex justify-content-start">
           <div>
-            <a class="rounded-circle p-2 bg-success" href=""><i style="color: black" class="bi bi-play-fill"></i></a>
+            <button class="bg-success rounded-circle fs-2 border-0 p-3"><i class="bi bi-play-fill"></i></button>
           </div>
           <div>
-            <a href=""><i class="bi bi-heart p-2"></i></a>
+            <a href=""><i style="color: white" class="ms-4 bi bi-heart fs-2"></i></a>
           </div>
           <div>
-            <a href=""><i class="bi bi-arrow-down-circle p-2"></i></a>
+            <a href=""><i style="color: white" class="ms-4 bi bi-arrow-down-circle fs-2"></i></a>
           </div>
           <div>
-            <a href=""><i class="bi bi-three-dots p-2"></i></a>
+            <a href=""><i style="color: white" class="ms-4 bi bi-three-dots fs-2"></i></a>
           </div>
         </div>
-
-        <table class="table table-borderless">
-          <thead style="border-bottom: 1px solid white">
-            <tr>
-              <th>#TITOLO</th>
-              <th>RIPRODUZIONI</th>
-              <th><i class="bi bi-clock"></i></th>
+        <!-- +++++++++++++++++++++++++++++++++++table ++++++++++++++-->
+        <table class="table table-borderless mt-5 container-fluid" style="color: white">
+          <thead class="justify-content-between" style="border-bottom: 1px solid white">
+            <tr id="centraNav">
+              <th class="flex"># TITOLO</th>
+              <th class="text-end">RIPRODUZIONI</th>
+              <th class="text-end"><i class="bi bi-clock"></i></th>
             </tr>
           </thead>
+
           <tbody>
             <tr>
-              <td>John</td>
-              <td>Doe</td>
-              <td>john@example.com</td>
+              <td>
+                <a style="color: white; text-decoration: none" href="">Montanelli-intro</a>
+                <p>sahdfjhsajhvsafdgv</p>
+              </td>
+
+              <td class="text-end">Doe</td>
+              <td class="text-end">john@example.com</td>
             </tr>
             <tr>
-              <td>Mary</td>
-              <td>Moe</td>
-              <td>mary@example.com</td>
+              <td>
+                Mary
+                <p>sahdfjhsajhvsafdgv</p>
+              </td>
+              <td class="text-end">Moe</td>
+              <td class="text-end">mary@example.com</td>
             </tr>
             <tr>
-              <td>July</td>
-              <td>Dooley</td>
-              <td>july@example.com</td>
+              <td>
+                July
+                <p>sahdfjhsajhvsafdgv</p>
+              </td>
+              <td class="text-end">Dooley</td>
+              <td class="text-end">july@example.com</td>
             </tr>
             <tr>
-              <td>John</td>
-              <td>Doe</td>
-              <td>john@example.com</td>
+              <td>
+                John
+                <p>sahdfjhsajhvsafdgv</p>
+              </td>
+              <td class="text-end">Doe</td>
+              <td class="text-end">john@example.com</td>
             </tr>
             <tr>
-              <td>John</td>
-              <td>Doe</td>
-              <td>john@example.com</td>
+              <td>
+                John
+                <p>sahdfjhsajhvsafdgv</p>
+              </td>
+              <td class="text-end">Doe</td>
+              <td class="text-end">john@example.com</td>
             </tr>
             <tr>
-              <td>John</td>
-              <td>Doe</td>
-              <td>john@example.com</td>
+              <td>
+                John
+                <p>sahdfjhsajhvsafdgv</p>
+              </td>
+              <td class="text-end">Doe</td>
+              <td class="text-end">john@example.com</td>
+            </tr>
+            <tr>
+              <td>
+                John
+                <p>sahdfjhsajhvsafdgv</p>
+              </td>
+              <td class="text-end">Doe</td>
+              <td class="text-end">john@example.com</td>
+            </tr>
+            <tr>
+              <td>
+                John
+                <p>sahdfjhsajhvsafdgv</p>
+              </td>
+              <td class="text-end">Doe</td>
+              <td class="text-end">john@example.com</td>
             </tr>
           </tbody>
         </table>
