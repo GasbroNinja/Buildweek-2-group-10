@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" sizes="32x32" type="image/png" href="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png">
     <title>Album</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -13,457 +14,758 @@
     <link rel="stylesheet" href="assets/css/circular-font.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
     <style>
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      
+      
+      ::-webkit-scrollbar-thumb {
+        background: #888; 
+      }
+
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+
+      button, a, i{
+        color: rgb(78, 78, 78);
+      }
+
+      button:hover, a:hover, i:hover{
+        color: #1ed760;
+      }
+
       button svg,
-      a svg {
+      a svg{
         fill: currentcolor;
         pointer-events: none;
       }
-      button svg:hover,
+
+      button i,
+      a i{
+        color: currentcolor;
+        pointer-events: none;
+      }
+
+      button svg:hover, button i:hover, a i:hover,
       a svg:hover {
         color: white;
+      }
+
+      .BgColour {
+      color: rgb(37, 37, 37);
+      transition: all 1s;
+      background-color: rgb(0, 0, 0);
+      }
+
+      #navbar{
+        position: fixed;
+        z-index: 1;
+        width: 66%;
+        top: 0;
       }
       /* #1ed760 */
     </style>
   </head>
   <body>
-    <div class="container-fluid mx-0">
-      <div
-        class="container-fluid px-0 mb-5 vh-auto"
-        style="
-          background: linear-gradient(
-            180deg,
-            rgba(214, 184, 76, 1) 18%,
-            rgba(214, 184, 76, 1) 22%,
-            rgba(52, 52, 52, 0.94) 67%
-          );
-        "
-      >
-        <div class="container" id="albumCenter">
-          <div class="row d-grid gap-2 d-flex mt-3 align-items-center justify-content-spacearound mb-4">
-            <div class="col-2 ps-4 pe-0">
-              <button class="mt-3 btn btn-dark me-2 rounded rounded-5 fw-bold fs-6 text-secondary" type="button">
-                <i class="bi bi-chevron-left"></i>
-              </button>
-              <button class="mt-3 btn btn-dark rounded rounded-5 fw-bold fs-6 text-secondary" type="button">
-                <i class="bi bi-chevron-right"></i>
-              </button>
-            </div>
-            <div class="col-3 ms-auto d-flex justify-content-end ps-0 mt-0">
-              <span class="mt-3 badge rounded-pill text-bg-dark d-flex fs-5"
-                ><img
-                  class="rounded rounded-5"
-                  width="25px"
-                  height="auto"
-                  src="assets/imgs/search/image-16.jpg"
-                  alt="avatar" />Lidia Nautilus ... <i class="bi bi-caret-down-fill"></i
-              ></span>
-            </div>
-          </div>
-          <div class="container d-flex align-items-end">
-            <!-- +++++++++++++++++++++++++++++++++album h2, paragrafi e immagini+++++++++++ -->
-            <img
-              class="m-2 shadow-lg mb-md-5 mb-lg-0"
-              src="assets/imgs/search/avatar-giovent-brucata.webp"
-              width="190px"
-              height="auto"
-              alt="avatar"
-            />
-            <div class="mt-5 p-2">
-              <div>
-                <p class="badge">ALBUM</p>
-                <h2 class="fw-bold" style="font-size: 5rem; color: white">Gioventù brucata</h2>
+    <div class="container-fluid position-absolute">
+      <div class="row">
+
+        <div class="col-md-2 d-none d-md-block bg-black text-white">
+          <div id="sidebarStop" class="ms-2 mb-1 text-white border-bottom border-light">
+            <div id="home" class="my-3">
+              <div class="d-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-house-door my-1 me-2" viewBox="0 0 16 16">
+                  <path
+                    d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z" />
+                </svg>
+  
+                <a href="homepage.html" class="link-light text-decoration-none">Home</a>
+  
+  
               </div>
-              <div class="d-flex flex align-center">
-                <img
-                  class="rounded-circle"
-                  src="assets/imgs/search/Pinguini-Tattici-Nucleari group.jpg"
-                  alt=""
-                  width="30px"
-                  height="30px"
-                />
-                <span>
-                  <span style="color: white" class="fw-semibold ms-2">Pinguini Tattici Nucleari</span>
-                  <span style="color: white" class="fw-semibold">·</span>
-                  <span style="color: white" class="fw-semibold">2017</span>
-                  <span style="color: white" class="fw-semibold">·</span>
-                  <span style="color: white" class="fw-semibold">12 brani,</span>
-                  <span class="fw-semibold" style="color: gray"> 53 min 20 sec.</span>
-                </span>
+              <div class="d-flex mt-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-search my-1 me-2" viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>
+  
+                <a href="" class="link-light text-decoration-none">Cerca</a>
+  
+              </div>
+              <div class="d-flex mt-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-collection my-1 me-2" viewBox="0 0 16 16">
+                  <path
+                    d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z" />
+                </svg>
+  
+                <a href="album.html" class="link-light text-decoration-none">La tua libreria</a>
+  
+  
               </div>
             </div>
+            <div id="playlist" class="mt-4 mb-3">
+              <div class="d-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-plus-square my-1 me-2" viewBox="0 0 16 16">
+                  <path
+                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                </svg>
+                <a href="" class="link-light text-decoration-none">Crea playlist</a>
+              </div>
+              <div class="d-flex mt-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-suit-heart-fill my-1 me-2" viewBox="0 0 16 16">
+                  <path
+                    d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
+                </svg>
+                <a href="" class="link-light text-decoration-none">Brani che ti piacciono</a>
+  
+              </div>
+              <div class="d-flex my-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-bookmark-fill my-1 me-2" viewBox="0 0 16 16">
+                  <path
+                    d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z" />
+                </svg>
+                <a href="" class="link-light text-decoration-none ">I tuoi episodi</a>
+  
+              </div>
+            </div>
           </div>
+  
+          <div id="sidebarScroll" style="height: calc(100vh - 200px);" class="my-3 opacity-75 overflow-auto">
+  
+            <div>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+  
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+  
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+  
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+  
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+  
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+  
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+  
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+  
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+  
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+  
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+  
+  
         </div>
 
-        <div
-          class="container-fluid mx-0 p-5 mt-5"
-          style="background: linear-gradient(0deg, rgb(52, 52, 52) 0%, rgba(52, 52, 52, 0.893) 100%); opacity: 75%"
-        >
-          <div class="d-flex justify-content-start align-items-center">
-            <!-- +++++++++++++++++button play ++++++++++++++++-->
-            <button class="rounded-circle border-0" style="background-color: #1ed760">
-              <span class="ButtonInner-sc-14ud5tc-0 fipMme encore-bright-accent-set"
-                ><span aria-hidden="true" class="IconWrapper__Wrapper-sc-1hf1hjl-0 lPFiy"
-                  ><svg
-                    role="img"
-                    height="70"
-                    width="60"
-                    aria-hidden="true"
-                    viewBox="0 0 24 24"
-                    data-encore-id="icon"
-                    class="Svg-sc-ytk21e-0 gQUQL"
-                  >
-                    <path
-                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
-                    ></path></svg></span
-              ></span>
-            </button>
-            <!--+++++++++++++       ++++++++ ++++++++++++     icone      +++++++++++++++++++++++                  -->
-            <div>
-              <a href=""><i style="color: white" class="ms-4 bi bi-heart fs-2"></i></a>
-            </div>
-            <div>
-              <a href=""><i style="color: white" class="ms-4 bi bi-arrow-down-circle fs-2"></i></a>
-            </div>
-            <div>
-              <a href=""><i style="color: white" class="ms-4 bi bi-three-dots fs-2"></i></a>
-            </div>
-          </div>
-          <!-- +++++++++++++++++++++++++++++++++++table ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-          <table class="table table-borderless mt-5 container-fluid" style="color: white">
-            <thead class="justify-content-between" style="border-bottom: 1px solid white">
-              <tr id="centraNav">
-                <th class="flex"># TITOLO</th>
-                <th class="text-end">RIPRODUZIONI</th>
-                <th class="text-end"><i class="bi bi-clock"></i></th>
-              </tr>
-            </thead>
 
-            <tbody>
-              <tr>
-                <td>
-                  <a class="fs-6 fw-bold" style="color: white; text-decoration: none" href="">Montanelli-intro</a>
-                  <a style="color: white; text-decoration: none" href=""><p>Pinguini Tattici Nucleari</p></a>
-                </td>
-                <td class="text-end">Doe</td>
-                <td class="text-end">john@example.com</td>
-              </tr>
-              <tr>
-                <td>
-                  <a class="fs-6 fw-bold" style="color: white; text-decoration: none" href="">Montanelli-intro</a>
-                  <a style="color: white; text-decoration: none" href=""><p>Pinguini Tattici Nucleari</p></a>
-                </td>
-                <td class="text-end">Moe</td>
-                <td class="text-end">mary@example.com</td>
-              </tr>
-              <tr>
-                <td>
-                  <a class="fs-6 fw-bold" style="color: white; text-decoration: none" href="">Montanelli-intro</a>
-                  <a style="color: white; text-decoration: none" href=""><p>Pinguini Tattici Nucleari</p></a>
-                </td>
-                <td class="text-end">Dooley</td>
-                <td class="text-end">july@example.com</td>
-              </tr>
-              <tr>
-                <td>
-                  <a class="fs-6 fw-bold" style="color: white; text-decoration: none" href="">Montanelli-intro</a>
-                  <a style="color: white; text-decoration: none" href=""><p>Pinguini Tattici Nucleari</p></a>
-                </td>
-                <td class="text-end">Doe</td>
-                <td class="text-end">john@example.com</td>
-              </tr>
-              <tr>
-                <td>
-                  <a class="fs-6 fw-bold" style="color: white; text-decoration: none" href="">Montanelli-intro</a>
-                  <a style="color: white; text-decoration: none" href=""><p>Pinguini Tattici Nucleari</p></a>
-                </td>
-                <td class="text-end">Doe</td>
-                <td class="text-end">john@example.com</td>
-              </tr>
-              <tr>
-                <td>
-                  <a class="fs-6 fw-bold" style="color: white; text-decoration: none" href="">Montanelli-intro</a>
-                  <a style="color: white; text-decoration: none" href=""><p>Pinguini Tattici Nucleari</p></a>
-                </td>
-                <td class="text-end">Doe</td>
-                <td class="text-end">john@example.com</td>
-              </tr>
-              <tr>
-                <td>
-                  <a class="fs-6 fw-bold" style="color: white; text-decoration: none" href="">Montanelli-intro</a>
-                  <a style="color: white; text-decoration: none" href=""><p>Pinguini Tattici Nucleari</p></a>
-                </td>
-                <td class="text-end">Doe</td>
-                <td class="text-end">john@example.com</td>
-              </tr>
-              <tr>
-                <td>
-                  <a class="fs-6 fw-bold" style="color: white; text-decoration: none" href="">Montanelli-intro</a>
-                  <a style="color: white; text-decoration: none" href=""><p>Pinguini Tattici Nucleari</p></a>
-                </td>
-                <td class="text-end">Doe</td>
-                <td class="text-end">john@example.com</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++    BOTTOM BAR          ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-        <div class="fixed-bottom container-fluid bg-dark">
-          <div class="row flex-nowrap d-flex">
-            <!----------------------------------------     PRIMA COL -->
-            <div class="p-3 col-3 d-flex justify-content-start align-items-center">
-              <img src="assets/imgs/search/image-12.jpg" alt="" width="60" height="60" />
-              <div class="align-items-center d-flex flex-column ms-3">
-                <p class="mb-0 fw-bold" style="color: white">Fat Funny Friend</p>
-                <p class="text-start mb-0" style="color: white">Maddie Zahm</p>
-              </div>
-              <div class="d-flex ps-3">
-                <a href=""><i style="color: white" class="ms-2 bi bi-heart fs-2"></i></a>
-              </div>
-            </div>
-            <!-- ++++++++++++            seconda col          ++++++++++-->
-            <div class="col-6 d-flex justify-content-center container-fluid align-items-center ms-5 p-3">
-              <div class="align-items-center d-flex flex-column">
-                >
-                <div>
-                  <!-- ++++++++++++++++++++++      ARROW shuffle-------riproduzione casuale         ++++++++ -->
-                  <button class="bg-transparent border-0">
-                    <svg
-                      role="img"
-                      height="16"
-                      width="16"
-                      aria-hidden="true"
-                      viewBox="0 0 16 16"
-                      data-encore-id="icon"
-                      class="Svg-sc-ytk21e-0 gQUQL"
-                      fill="white"
-                      id="greenClick"
-                    >
-                      <path
-                        d="M13.151.922a.75.75 0 1 0-1.06 1.06L13.109 3H11.16a3.75 3.75 0 0 0-2.873 1.34l-6.173 7.356A2.25 2.25 0 0 1 .39 12.5H0V14h.391a3.75 3.75 0 0 0 2.873-1.34l6.173-7.356a2.25 2.25 0 0 1 1.724-.804h1.947l-1.017 1.018a.75.75 0 0 0 1.06 1.06L15.98 3.75 13.15.922zM.391 3.5H0V2h.391c1.109 0 2.16.49 2.873 1.34L4.89 5.277l-.979 1.167-1.796-2.14A2.25 2.25 0 0 0 .39 3.5z"
-                      ></path>
-                      <path
-                        d="m7.5 10.723.98-1.167.957 1.14a2.25 2.25 0 0 0 1.724.804h1.947l-1.017-1.018a.75.75 0 1 1 1.06-1.06l2.829 2.828-2.829 2.828a.75.75 0 1 1-1.06-1.06L13.109 13H11.16a3.75 3.75 0 0 1-2.873-1.34l-.787-.938z"
-                      ></path>
-                    </svg>
-                  </button>
-                  <!-- ++++++++++++++++++++++      ARROW Left          ++++++++ -->
-                  <button class="bg-transparent border-0">
-                    <svg
-                      role="img"
-                      height="16"
-                      width="16"
-                      aria-hidden="true"
-                      viewBox="0 0 16 16"
-                      data-encore-id="icon"
-                      class="Svg-sc-ytk21e-0 gQUQL"
-                      fill="white"
-                    >
-                      <path
-                        d="M3.3 1a.7.7 0 0 1 .7.7v5.15l9.95-5.744a.7.7 0 0 1 1.05.606v12.575a.7.7 0 0 1-1.05.607L4 9.149V14.3a.7.7 0 0 1-.7.7H1.7a.7.7 0 0 1-.7-.7V1.7a.7.7 0 0 1 .7-.7h1.6z"
-                      ></path>
-                    </svg>
-                  </button>
-                  <!-- ++++++++++++++++++++++      circle fill play         ++++++++ -->
-                  <button class="rounded-circle border-0" style="background-color: white">
-                    <svg
-                      role="img"
-                      height="40"
-                      width="25"
-                      aria-hidden="true"
-                      viewBox="0 0 16 16"
-                      data-encore-id="icon"
-                      class="Svg-sc-ytk21e-0 gQUQL"
-                    >
-                      <path
-                        d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"
-                      ></path>
-                    </svg>
-                  </button>
-                  <!-- ++++++++++++++++++++++      ARROW Right          ++++++++ -->
-                  <button class="bg-transparent border-0">
-                    <svg
-                      role="img"
-                      height="16"
-                      width="16"
-                      aria-hidden="true"
-                      viewBox="0 0 16 16"
-                      data-encore-id="icon"
-                      class="Svg-sc-ytk21e-0 gQUQL"
-                      fill="white"
-                    >
-                      <path
-                        d="M12.7 1a.7.7 0 0 0-.7.7v5.15L2.05 1.107A.7.7 0 0 0 1 1.712v12.575a.7.7 0 0 0 1.05.607L12 9.149V14.3a.7.7 0 0 0 .7.7h1.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-1.6z"
-                      ></path>
-                    </svg>
-                  </button>
-                  <!-- ++++++++++++++++++++++       ARROW ROLE       ++++++++ -->
-                  <button class="bg-transparent border-0">
-                    <svg
-                      role="img"
-                      height="16"
-                      width="16"
-                      aria-hidden="true"
-                      viewBox="0 0 16 16"
-                      data-encore-id="icon"
-                      class="Svg-sc-ytk21e-0 gQUQL"
-                      fill="white"
-                      id="greenClick"
-                    >
-                      <path
-                        d="M0 4.75A3.75 3.75 0 0 1 3.75 1h8.5A3.75 3.75 0 0 1 16 4.75v5a3.75 3.75 0 0 1-3.75 3.75H9.81l1.018 1.018a.75.75 0 1 1-1.06 1.06L6.939 12.75l2.829-2.828a.75.75 0 1 1 1.06 1.06L9.811 12h2.439a2.25 2.25 0 0 0 2.25-2.25v-5a2.25 2.25 0 0 0-2.25-2.25h-8.5A2.25 2.25 0 0 0 1.5 4.75v5A2.25 2.25 0 0 0 3.75 12H5v1.5H3.75A3.75 3.75 0 0 1 0 9.75v-5z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-                <!-- +++++++++++++++++++++++++            PROGRESS BAR                +++++++++++++++++++++++++++++ -->
-                <div class="playback-bar d-flex mt-3">
-                  <div
-                    data-testid="playback-position"
-                    class="Type__TypeElement-sc-goli3j-0 fyaNJr playback-bar__progress-time-elapsed mx-2"
-                    data-encore-id="type"
-                    style="color: white"
-                  >
-                    1:07
-                  </div>
-                  <div class="p1ULRzPc4bD8eQ4T_wyp DFtdzavKSbEhwKYkPTa6" data-testid="playback-progressbar">
-                    <label class="hidden-visually">
-                      <!-- gestire le misure della progresse bar in larghezza -->
-                      <input
-                        style="width: 50vw"
-                        type="range"
-                        min="0"
-                        max="200"
-                        step="5"
-                        aria-valuetext="1:07/2:43"
-                        value="80"
-                        id="greenClick"
-                    /></label>
-                    <div
-                      class="TywOcKZEqNynWecCiATc"
-                      data-testid="progress-bar"
-                      style="--progress-bar-transform: 41.1043%"
-                    >
-                      <div class="NoOAOv6U6vtqj_ybS1Cd" data-testid="progress-bar-background">
-                        <div class="w699O0LgQRghXyl3bs9u"><div class="epWhU7hHGktzlO_dop6z"></div></div>
-                        <div class="Vis45PPawTyED7Lt2_LI"></div>
+        <div class="col-md-8 p-0" >
+
+
+          <div class="container-fluid mx-0 px-0" >
+            <div
+              class="container-fluid px-0 mb-5 vh-auto"
+              style="
+                background: linear-gradient(
+                  180deg,
+                  rgba(214, 184, 76, 1) 18%,
+                  rgba(214, 184, 76, 1) 22%,
+                  rgba(52, 52, 52, 0.94) 45%
+                );
+              "
+            >
+              <div class="container px-0 overflow-auto" style="height: calc(100vh - 0px)" id="albumCenter">
+
+                <div class="navbar w-100">
+                  <div class="navbar px-0 d-flex justify-content-center" id="navbar">
+                    
+                    <div class="row d-grid gap-2 d-flex mt-3 align-items-center justify-content-spacearound mb-4 w-100">
+                      <div class="col-md-3 col-lg-2 ps-4 pe-0 d-flex">
+                        <button class="btn btn-dark me-2 rounded rounded-5 fw-bold fs-6" style="color: #7f7f7f;" type="button"><i class="bi bi-chevron-left fs-5"></i></button>
+                        <button class="btn btn-dark rounded rounded-5 fw-bold fs-6" style="color: #7f7f7f;" type="button"><i class="bi bi-chevron-right fs-5"></i></button>
+                      </div>
+                      <div class="col-md-8 ms-md-auto ms-auto col-lg-8 col-xxl-9 d-flex justify-content-end px-0 mt-0">
+                        <span class="badge rounded-pill text-bg-dark d-flex ps-3 fs-5 position-relative"
+                          ><img
+                            class="rounded rounded-5 position-absolute top-50 start-25 translate-middle"
+                            width="32px"
+                            height="auto"
+                            src="assets/imgs/avatar.jpeg"
+                            alt="avatar"
+                          />&nbsp;&nbsp;&nbsp;&nbsp;Lidia Nautilus ...<i class="bi bi-caret-down-fill ps-3"></i></span
+                        >
                       </div>
                     </div>
                   </div>
-                  <div
-                    data-testid="playback-duration"
-                    data-test-position="67930"
-                    class="Type__TypeElement-sc-goli3j-0 fyaNJr npFSJSO1wsu3mEEGb5bh ms-2"
-                    data-encore-id="type"
-                    style="color: white"
-                  >
-                    2:43
+                </div>
+
+                <div class="container d-flex align-items-end" style="margin-top: 84px;">
+                  <!-- +++++++++++++++++++++++++++++++++album h2, paragrafi e immagini+++++++++++ -->
+                  <img
+                    class="m-2 shadow-lg mb-md-5 mb-lg-0"
+                    src="assets/imgs/search/avatar-giovent-brucata.webp"
+                    width="190px"
+                    height="auto"
+                    alt="avatar"
+                  />
+                  <div class="mt-5 p-2">
+                    <div>
+                      <p class="badge">ALBUM</p>
+                      <h2 class="fw-bold text-light" style="font-size: 5rem;">Gioventù brucata</h2>
+                    </div>
+                    <div class="d-flex flex align-center">
+                      <img
+                        class="rounded-circle"
+                        src="assets/imgs/search/Pinguini-Tattici-Nucleari group.jpg"
+                        alt=""
+                        width="30px"
+                        height="30px"
+                      />
+                      <span>
+                        <span class="fw-semibold ms-2 text-light">Pinguini Tattici Nucleari</span>
+                        <span class="fw-semibold text-light">·</span>
+                        <span class="fw-semibold text-light">2017</span>
+                        <span class="fw-semibold text-light">·</span>
+                        <span class="fw-semibold text-light">12 brani,</span>
+                        <span class="fw-semibold text-secondary"> 53 min 20 sec.</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              
+
+                <div
+                  class="container-fluid mx-0 p-5 mt-5"
+                  style="background: linear-gradient(0deg, rgb(52, 52, 52) 0%, rgba(52, 52, 52, 0.893) 100%); opacity: 75%"
+                >
+                  <div class="d-flex justify-content-start align-items-center">
+                    <!-- +++++++++++++++++button play ++++++++++++++++-->
+                    <button class="rounded-circle border-0" style="background-color: #ffffff">
+                      <span class="ButtonInner-sc-14ud5tc-0 fipMme encore-bright-accent-set"
+                        ><span aria-hidden="true" class="IconWrapper__Wrapper-sc-1hf1hjl-0 lPFiy"
+                          ><svg
+                            role="img"
+                            height="70"
+                            width="60"
+                            aria-hidden="true"
+                            viewBox="0 0 24 24"
+                            data-encore-id="icon"
+                            class="Svg-sc-ytk21e-0 gQUQL"
+                          >
+                            <path
+                              d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                            ></path></svg></span
+                      ></span>
+                    </button>
+                    <!--+++++++++++++       ++++++++ ++++++++++++     icone      +++++++++++++++++++++++                  -->
+                    <div>
+                      <a href=""><i class="ms-4 bi bi-heart fs-2"></i></a>
+                    </div>
+                    <div>
+                      <a href=""><i class="ms-4 bi bi-arrow-down-circle fs-2"></i></a>
+                    </div>
+                    <div>
+                      <a href=""><i class="ms-4 bi bi-three-dots fs-2"></i></a>
+                    </div>
+                  </div>
+                  <!-- +++++++++++++++++++++++++++++++++++table ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+                  <table class="table table-borderless mt-5 container-fluid text-light">
+                    <thead class="justify-content-between" style="border-bottom: 1px solid white">
+                      <tr id="centraNav">
+                        <th class="flex"># TITOLO</th>
+                        <th class="text-end">RIPRODUZIONI</th>
+                        <th class="text-end"><i class="bi bi-clock text-light"></i></th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>
+                          <a class="fs-6 fw-bold" style="color: white; text-decoration: none" href="">Montanelli-intro</a>
+                          <a style="color: white; text-decoration: none" href=""><p>Pinguini Tattici Nucleari</p></a>
+                        </td>
+                        <td class="text-end">Doe</td>
+                        <td class="text-end">john@example.com</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a class="fs-6 fw-bold" style="color: white; text-decoration: none" href="">Montanelli-intro</a>
+                          <a style="color: white; text-decoration: none" href=""><p>Pinguini Tattici Nucleari</p></a>
+                        </td>
+                        <td class="text-end">Moe</td>
+                        <td class="text-end">mary@example.com</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a class="fs-6 fw-bold" style="color: white; text-decoration: none" href="">Montanelli-intro</a>
+                          <a style="color: white; text-decoration: none" href=""><p>Pinguini Tattici Nucleari</p></a>
+                        </td>
+                        <td class="text-end">Dooley</td>
+                        <td class="text-end">july@example.com</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a class="fs-6 fw-bold" style="color: white; text-decoration: none" href="">Montanelli-intro</a>
+                          <a style="color: white; text-decoration: none" href=""><p>Pinguini Tattici Nucleari</p></a>
+                        </td>
+                        <td class="text-end">Doe</td>
+                        <td class="text-end">john@example.com</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a class="fs-6 fw-bold" style="color: white; text-decoration: none" href="">Montanelli-intro</a>
+                          <a style="color: white; text-decoration: none" href=""><p>Pinguini Tattici Nucleari</p></a>
+                        </td>
+                        <td class="text-end">Doe</td>
+                        <td class="text-end">john@example.com</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a class="fs-6 fw-bold" style="color: white; text-decoration: none" href="">Montanelli-intro</a>
+                          <a style="color: white; text-decoration: none" href=""><p>Pinguini Tattici Nucleari</p></a>
+                        </td>
+                        <td class="text-end">Doe</td>
+                        <td class="text-end">john@example.com</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a class="fs-6 fw-bold" style="color: white; text-decoration: none" href="">Montanelli-intro</a>
+                          <a style="color: white; text-decoration: none" href=""><p>Pinguini Tattici Nucleari</p></a>
+                        </td>
+                        <td class="text-end">Doe</td>
+                        <td class="text-end">john@example.com</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a class="fs-6 fw-bold" style="color: white; text-decoration: none" href="">Montanelli-intro</a>
+                          <a style="color: white; text-decoration: none" href=""><p>Pinguini Tattici Nucleari</p></a>
+                        </td>
+                        <td class="text-end">Doe</td>
+                        <td class="text-end">john@example.com</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <footer class="pe-3 mb-5" style="height: auto; margin-top: 80vh;">
+                    <div class="container-fluid mx-3">
+                      <div class="row row-cols-3 d-flex">
+                        <div class="col-2 col-md-3 col-lg-2 d-flex justify-content-start">
+                          <div class="text-light">
+                            <h5 class="text-light opacity-100 mb-3">Azienda</h5>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Chi siamo</p></a>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Opportunità di lavoro</p></a>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">For the Record</p></a>
+                          </div>
+                        </div>
+                        <div class="col-2 col-md-3 col-lg-2 d-flex justify-content-start">
+                          <div class="text-light">
+                            <h5 class="text-light opacity-100 mb-3">Community</h5>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Per artisti</p></a>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Sviluppatori</p></a>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Pubblicità</p></a>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Investitori</p></a>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Venditori</p></a>
+                          </div>
+                        </div>
+                        <div class="col-2 col-md-3 col-lg-2 d-flex justify-content-start">
+                          <div class="text-light">
+                            <h5 class="text-light opacity-100 mb-3">Link Utili</h5>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Assistenza</p></a>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">App per cellulare gratuita</p></a>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Diritti del consumatore</p></a>
+            
+                          </div>
+                        </div>
+                        <div class="col-2 col-md-1 d-flex justify-content-end align-items-start flex-grow-1">
+            
+                          <button class="btn btn-dark me-2 rounded rounded-5 fw-bold fs-6" style="color: #7f7f7f;" type="button">
+            
+                            <a class="text-decoration-none text-light opacity-50" href="#"><i class="bi bi-instagram"></i></a>
+            
+                          </button>
+                          <button class="btn btn-dark me-2 rounded rounded-5 fw-bold fs-6" style="color: #7f7f7f;" type="button">
+            
+                            <a class="text-decoration-none text-light opacity-50" href="#"><i class="bi bi-twitter"></i></a>
+            
+                          </button>
+                          <button class="btn btn-dark me-2 rounded rounded-5 fw-bold fs-6" style="color: #7f7f7f;" type="button">
+            
+                            <a class="text-decoration-none text-light opacity-50" href="#"><i class="bi bi-facebook"></i></a>
+            
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <hr class="text-secondary opacity-75 ms-3">
+                      <div class="row row-cols-2 d-flex ms-3">
+                        <div class="col-2 d-flex justify-content-start ps-0 pe-1">
+                          <span class="opacity-50 text-light">Informazioni legali</span>
+                        </div>
+                        <div class="col-2 d-flex justify-content-start ps-0 pe-1">
+                          <span class="opacity-50 text-light">Centro sulla privacy</span>
+                        </div>
+                        <div class="col-2 d-flex justify-content-start ps-0 pe-1">
+                          <span class="opacity-50 text-light">Informativa sulla privacy</span>
+                        </div>
+                        <div class="col-2 d-flex justify-content-start ps-0 pe-1">
+                          <span class="opacity-50 text-light">Impostazioni cookie</span>
+                        </div>
+                        <div class="col-2 d-flex justify-content-start ps-0 pe-1">
+                          <span class="opacity-50 text-light">Info annunci</span>
+                        </div>
+                        <div class="col-2 d-flex flex-grow justify-content-end">
+                          <h6 class="text-light opacity-75">© 2023 Spotify AB</h6>
+                        </div>
+                      </div>
+                  </footer>
+                </div>
+
+              </div>
+              <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++    BOTTOM BAR          ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+              <div class="fixed-bottom container-fluid bg-dark">
+                <div class="row flex-nowrap d-flex">
+                  <!----------------------------------------     PRIMA COL -->
+                  <div class="p-3 col-3 d-flex justify-content-start align-items-center">
+                    <img src="assets/imgs/search/image-12.jpg" alt="" width="60" height="60" />
+                    <div class="align-items-center d-flex flex-column ms-3">
+                      <p class="mb-0 fw-bold" style="color: white">Fat Funny Friend</p>
+                      <p class="text-start mb-0" style="color: white">Maddie Zahm</p>
+                    </div>
+                    <div class="d-flex ps-3">
+                      <a href="#" class="text-decoration-none"><i class="ms-2 bi bi-heart fs-2"></i></a>
+                    </div>
+                  </div>
+                  <!-- ++++++++++++            seconda col          ++++++++++-->
+                  <div class="col-6 d-flex justify-content-center container-fluid align-items-center ms-5 p-3">
+                    <div class="align-items-center d-flex flex-column">
+                      >
+                      <div>
+                        <!-- ++++++++++++++++++++++      ARROW shuffle-------riproduzione casuale         ++++++++ -->
+                        <button class="bg-transparent border-0">
+                          <svg
+                            role="img"
+                            height="16"
+                            width="16"
+                            aria-hidden="true"
+                            viewBox="0 0 16 16"
+                            data-encore-id="icon"
+                            class="Svg-sc-ytk21e-0 gQUQL"
+                            fill="white"
+                            id="greenClick"
+                          >
+                            <path
+                              d="M13.151.922a.75.75 0 1 0-1.06 1.06L13.109 3H11.16a3.75 3.75 0 0 0-2.873 1.34l-6.173 7.356A2.25 2.25 0 0 1 .39 12.5H0V14h.391a3.75 3.75 0 0 0 2.873-1.34l6.173-7.356a2.25 2.25 0 0 1 1.724-.804h1.947l-1.017 1.018a.75.75 0 0 0 1.06 1.06L15.98 3.75 13.15.922zM.391 3.5H0V2h.391c1.109 0 2.16.49 2.873 1.34L4.89 5.277l-.979 1.167-1.796-2.14A2.25 2.25 0 0 0 .39 3.5z"
+                            ></path>
+                            <path
+                              d="m7.5 10.723.98-1.167.957 1.14a2.25 2.25 0 0 0 1.724.804h1.947l-1.017-1.018a.75.75 0 1 1 1.06-1.06l2.829 2.828-2.829 2.828a.75.75 0 1 1-1.06-1.06L13.109 13H11.16a3.75 3.75 0 0 1-2.873-1.34l-.787-.938z"
+                            ></path>
+                          </svg>
+                        </button>
+                        <!-- ++++++++++++++++++++++      ARROW Left          ++++++++ -->
+                        <button class="bg-transparent border-0">
+                          <svg
+                            role="img"
+                            height="16"
+                            width="16"
+                            aria-hidden="true"
+                            viewBox="0 0 16 16"
+                            data-encore-id="icon"
+                            class="Svg-sc-ytk21e-0 gQUQL"
+                            fill="white"
+                          >
+                            <path
+                              d="M3.3 1a.7.7 0 0 1 .7.7v5.15l9.95-5.744a.7.7 0 0 1 1.05.606v12.575a.7.7 0 0 1-1.05.607L4 9.149V14.3a.7.7 0 0 1-.7.7H1.7a.7.7 0 0 1-.7-.7V1.7a.7.7 0 0 1 .7-.7h1.6z"
+                            ></path>
+                          </svg>
+                        </button>
+                        <!-- ++++++++++++++++++++++      circle fill play         ++++++++ -->
+                        <button class="rounded-circle border-0" style="background-color: white">
+                          <svg
+                            role="img"
+                            height="40"
+                            width="30"
+                            aria-hidden="true"
+                            viewBox="0 0 16 16"
+                            data-encore-id="icon"
+                            fill="white"
+                            class="Svg-sc-ytk21e-0 gQUQL"
+                          >
+                            <path
+                              d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"
+                            ></path>
+                          </svg>
+                        </button>
+                        <!-- ++++++++++++++++++++++      ARROW Right          ++++++++ -->
+                        <button class="bg-transparent border-0">
+                          <svg
+                            role="img"
+                            height="16"
+                            width="16"
+                            aria-hidden="true"
+                            viewBox="0 0 16 16"
+                            data-encore-id="icon"
+                            class="Svg-sc-ytk21e-0 gQUQL"
+                            fill="white"
+                          >
+                            <path
+                              d="M12.7 1a.7.7 0 0 0-.7.7v5.15L2.05 1.107A.7.7 0 0 0 1 1.712v12.575a.7.7 0 0 0 1.05.607L12 9.149V14.3a.7.7 0 0 0 .7.7h1.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-1.6z"
+                            ></path>
+                          </svg>
+                        </button>
+                        <!-- ++++++++++++++++++++++       ARROW ROLE       ++++++++ -->
+                        <button class="bg-transparent border-0">
+                          <svg
+                            role="img"
+                            height="16"
+                            width="16"
+                            aria-hidden="true"
+                            viewBox="0 0 16 16"
+                            data-encore-id="icon"
+                            class="Svg-sc-ytk21e-0 gQUQL"
+                            fill="white"
+                            id="greenClick"
+                          >
+                            <path
+                              d="M0 4.75A3.75 3.75 0 0 1 3.75 1h8.5A3.75 3.75 0 0 1 16 4.75v5a3.75 3.75 0 0 1-3.75 3.75H9.81l1.018 1.018a.75.75 0 1 1-1.06 1.06L6.939 12.75l2.829-2.828a.75.75 0 1 1 1.06 1.06L9.811 12h2.439a2.25 2.25 0 0 0 2.25-2.25v-5a2.25 2.25 0 0 0-2.25-2.25h-8.5A2.25 2.25 0 0 0 1.5 4.75v5A2.25 2.25 0 0 0 3.75 12H5v1.5H3.75A3.75 3.75 0 0 1 0 9.75v-5z"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <!-- +++++++++++++++++++++++++            PROGRESS BAR                +++++++++++++++++++++++++++++ -->
+                      <div class="playback-bar d-flex mt-3">
+                        <div
+                          data-testid="playback-position"
+                          class="Type__TypeElement-sc-goli3j-0 fyaNJr playback-bar__progress-time-elapsed mx-2"
+                          data-encore-id="type"
+                          style="color: white"
+                        >
+                          1:07
+                        </div>
+                        <div class="p1ULRzPc4bD8eQ4T_wyp DFtdzavKSbEhwKYkPTa6" data-testid="playback-progressbar">
+                          <label class="hidden-visually">
+                            <!-- gestire le misure della progresse bar in larghezza -->
+                            <input
+                              style="width: 50vw"
+                              type="range"
+                              min="0"
+                              max="200"
+                              step="5"
+                              aria-valuetext="1:07/2:43"
+                              value="80"
+                              id="greenClick"
+                          /></label>
+                          <div
+                            class="TywOcKZEqNynWecCiATc"
+                            data-testid="progress-bar"
+                            style="--progress-bar-transform: 41.1043%"
+                          >
+                            <div class="NoOAOv6U6vtqj_ybS1Cd" data-testid="progress-bar-background">
+                              <div class="w699O0LgQRghXyl3bs9u"><div class="epWhU7hHGktzlO_dop6z"></div></div>
+                              <div class="Vis45PPawTyED7Lt2_LI"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          data-testid="playback-duration"
+                          data-test-position="67930"
+                          class="Type__TypeElement-sc-goli3j-0 fyaNJr npFSJSO1wsu3mEEGb5bh ms-2"
+                          data-encore-id="type"
+                          style="color: white"
+                        >
+                          2:43
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ++++++++++++          terza col       ++++++++++-->
+                  <div class="col-auto d-flex align-items-center">
+                    <!-- microphone -->
+                    <button class="bg-transparent border-0">
+                      <svg
+                        role="img"
+                        height="16"
+                        width="16"
+                        aria-hidden="true"
+                        viewBox="0 0 16 16"
+                        data-encore-id="icon"
+                        class="Svg-sc-ytk21e-0 gQUQL"
+                        fill="white"
+                        id="greenClick"
+                      >
+                        <path
+                          d="M13.426 2.574a2.831 2.831 0 0 0-4.797 1.55l3.247 3.247a2.831 2.831 0 0 0 1.55-4.797zM10.5 8.118l-2.619-2.62A63303.13 63303.13 0 0 0 4.74 9.075L2.065 12.12a1.287 1.287 0 0 0 1.816 1.816l3.06-2.688 3.56-3.129zM7.12 4.094a4.331 4.331 0 1 1 4.786 4.786l-3.974 3.493-3.06 2.689a2.787 2.787 0 0 1-3.933-3.933l2.676-3.045 3.505-3.99z"
+                        ></path>
+                      </svg>
+                    </button>
+                    <!-- +++++++++++++++++++++++++++     menù hamburgher -+++++++++++++++-->
+                    <button class="bg-transparent border-0">
+                      <svg
+                        role="img"
+                        height="16"
+                        width="16"
+                        aria-hidden="true"
+                        viewBox="0 0 16 16"
+                        data-encore-id="icon"
+                        class="Svg-sc-ytk21e-0 gQUQL"
+                        fill="white"
+                        id="greenClick"
+                      >
+                        <path
+                          d="M15 15H1v-1.5h14V15zm0-4.5H1V9h14v1.5zm-14-7A2.5 2.5 0 0 1 3.5 1h9a2.5 2.5 0 0 1 0 5h-9A2.5 2.5 0 0 1 1 3.5zm2.5-1a1 1 0 0 0 0 2h9a1 1 0 1 0 0-2h-9z"
+                        ></path>
+                      </svg>
+                    </button>
+                    <!--+++++++++++++++++++++++    hi fi audio     +++++++++++++++++++++++++++ -->
+                    <button id class="bg-transparent border-0">
+                      <svg
+                        role="presentation"
+                        height="16"
+                        width="16"
+                        aria-hidden="true"
+                        class="Svg-sc-ytk21e-0 gQUQL"
+                        viewBox="0 0 16 16"
+                        data-encore-id="icon"
+                        fill="white"
+                      >
+                        <path
+                          d="M6 2.75C6 1.784 6.784 1 7.75 1h6.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15h-6.5A1.75 1.75 0 0 1 6 13.25V2.75zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h6.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25h-6.5zm-6 0a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25H4V11H1.75A1.75 1.75 0 0 1 0 9.25v-6.5C0 1.784.784 1 1.75 1H4v1.5H1.75zM4 15H2v-1.5h2V15z"
+                        ></path>
+                        <path d="M13 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm-1-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+                      </svg>
+                    </button>
+                    <!--+++++++++++++++++++++++++++++++++    volume      +++++++++++++++++-->
+                    <button class="bg-transparent border-0">
+                      <svg
+                        role="presentation"
+                        height="16"
+                        width="16"
+                        aria-hidden="true"
+                        aria-label="Volume alto"
+                        viewBox="0 0 16 16"
+                        data-encore-id="icon"
+                        class="Svg-sc-ytk21e-0 gQUQL"
+                        fill="white"
+                        id="greenClick"
+                      >
+                        <path
+                          d="M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 4.29V5.56a2.75 2.75 0 0 1 0 4.88z"
+                        ></path>
+                        <path d="M11.5 13.614a5.752 5.752 0 0 0 0-11.228v1.55a4.252 4.252 0 0 1 0 8.127v1.55z"></path>
+                      </svg>
+                    </button>
+                    <!-- +++++++++++++++++     volume progress bar ++++++++-->
+                    <div class="col-6 col-md-5 d-flex">
+                      <input
+                        style="width: 5vw"
+                        type="range"
+                        id="greenClick"
+                        name="cowbell"
+                        min="0"
+                        max="100"
+                        value="90"
+                        step="10"
+                      />
+                      <label style="width: 0" for="cowbell">Cowbell</label>
+                    </div>
+                    <!--+++++++++++++++++ Arrows expand +++++++++++++++-->
+                    <div><i style="color: white" class="ms-0 mx-5 bi bi-arrows-angle-expand"></i></div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- ++++++++++++          terza col       ++++++++++-->
-            <div class="col-auto d-flex align-items-center">
-              <!-- microphone -->
-              <button class="bg-transparent border-0">
-                <svg
-                  role="img"
-                  height="16"
-                  width="16"
-                  aria-hidden="true"
-                  viewBox="0 0 16 16"
-                  data-encore-id="icon"
-                  class="Svg-sc-ytk21e-0 gQUQL"
-                  fill="white"
-                  id="greenClick"
-                >
-                  <path
-                    d="M13.426 2.574a2.831 2.831 0 0 0-4.797 1.55l3.247 3.247a2.831 2.831 0 0 0 1.55-4.797zM10.5 8.118l-2.619-2.62A63303.13 63303.13 0 0 0 4.74 9.075L2.065 12.12a1.287 1.287 0 0 0 1.816 1.816l3.06-2.688 3.56-3.129zM7.12 4.094a4.331 4.331 0 1 1 4.786 4.786l-3.974 3.493-3.06 2.689a2.787 2.787 0 0 1-3.933-3.933l2.676-3.045 3.505-3.99z"
-                  ></path>
-                </svg>
-              </button>
-              <!-- +++++++++++++++++++++++++++     menù hamburgher -+++++++++++++++-->
-              <button class="bg-transparent border-0">
-                <svg
-                  role="img"
-                  height="16"
-                  width="16"
-                  aria-hidden="true"
-                  viewBox="0 0 16 16"
-                  data-encore-id="icon"
-                  class="Svg-sc-ytk21e-0 gQUQL"
-                  fill="white"
-                  id="greenClick"
-                >
-                  <path
-                    d="M15 15H1v-1.5h14V15zm0-4.5H1V9h14v1.5zm-14-7A2.5 2.5 0 0 1 3.5 1h9a2.5 2.5 0 0 1 0 5h-9A2.5 2.5 0 0 1 1 3.5zm2.5-1a1 1 0 0 0 0 2h9a1 1 0 1 0 0-2h-9z"
-                  ></path>
-                </svg>
-              </button>
-              <!--+++++++++++++++++++++++    hi fi audio     +++++++++++++++++++++++++++ -->
-              <button id class="bg-transparent border-0">
-                <svg
-                  role="presentation"
-                  height="16"
-                  width="16"
-                  aria-hidden="true"
-                  class="Svg-sc-ytk21e-0 gQUQL"
-                  viewBox="0 0 16 16"
-                  data-encore-id="icon"
-                  fill="white"
-                >
-                  <path
-                    d="M6 2.75C6 1.784 6.784 1 7.75 1h6.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15h-6.5A1.75 1.75 0 0 1 6 13.25V2.75zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h6.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25h-6.5zm-6 0a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25H4V11H1.75A1.75 1.75 0 0 1 0 9.25v-6.5C0 1.784.784 1 1.75 1H4v1.5H1.75zM4 15H2v-1.5h2V15z"
-                  ></path>
-                  <path d="M13 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm-1-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
-                </svg>
-              </button>
-              <!--+++++++++++++++++++++++++++++++++    volume      +++++++++++++++++-->
-              <button class="bg-transparent border-0">
-                <svg
-                  role="presentation"
-                  height="16"
-                  width="16"
-                  aria-hidden="true"
-                  aria-label="Volume alto"
-                  viewBox="0 0 16 16"
-                  data-encore-id="icon"
-                  class="Svg-sc-ytk21e-0 gQUQL"
-                  fill="white"
-                  id="greenClick"
-                >
-                  <path
-                    d="M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 4.29V5.56a2.75 2.75 0 0 1 0 4.88z"
-                  ></path>
-                  <path d="M11.5 13.614a5.752 5.752 0 0 0 0-11.228v1.55a4.252 4.252 0 0 1 0 8.127v1.55z"></path>
-                </svg>
-              </button>
-              <!-- +++++++++++++++++     volume progress bar ++++++++-->
-              <div class="col-6 col-md-5 d-flex">
-                <input
-                  style="width: 5vw"
-                  type="range"
-                  id="greenClick"
-                  name="cowbell"
-                  min="0"
-                  max="100"
-                  value="90"
-                  step="10"
-                />
-                <label style="width: 0" for="cowbell">Cowbell</label>
-              </div>
-              <!--+++++++++++++++++ Arrows expand +++++++++++++++-->
-              <div><i style="color: white" class="ms-0 mx-5 bi bi-arrows-angle-expand"></i></div>
+              <!--++++++++++++++++++++++++++++++++++++++++++++             BOTTOM BAR fine     +++++++++++++++++++++++++++++++++++++-->
             </div>
           </div>
         </div>
-        <!--++++++++++++++++++++++++++++++++++++++++++++             BOTTOM BAR fine     +++++++++++++++++++++++++++++++++++++-->
+        <div class="col-md-2 d-none d-md-block bg-black text-white align-items-center">
+          <div class="d-flex justify-content-between">
+            <div>
+              <h5>Attività amici</h5>
+            </div>
+            <div class="d-flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus"
+                viewBox="0 0 16 16">
+                <path
+                  d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                <path fill-rule="evenodd"
+                  d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                viewBox="0 0 16 16">
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+              </svg>
+  
+            </div>
+          </div>
+          <div class="p-2 ">
+            <div class="d-flex">
+              <img src="assets/imgs/avatar.jpeg" alt="" class="rounded-circle me-2 mt-2"
+                style="width: 25px; height: 25px;">
+              <div class="opacity-75">
+                <p class="p-0 m-0">Chalie Hookhan</p>
+                <p class="p-0 m-0">In camera</p>
+  
+                <p class="p-0 m-0">EP</p>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+
+
+
       </div>
     </div>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      function scrollValue() {
+        let containerNav = document.getElementById('homePage')
+        let navbar = document.getElementById('navbar');
+        let scroll = window.scrollY;
+        if (scroll < 50) {
+            navbar.classList.remove('BgColour');
+        } else {
+            navbar.classList.add('BgColour');
+        }
+      }
+      document.addEventListener('scroll', scrollValue);
+  
+      </script>
   </body>
 </html>
