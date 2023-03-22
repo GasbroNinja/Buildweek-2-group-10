@@ -658,15 +658,17 @@
         }
       }
       document.addEventListener('scroll', scrollValue);
-      /*
-      const btns = document.querySelectorAll("#btnPlayer");
-      console.log(btns)
 
-      btns.addEventListener('click', function onClickz(){
-        btns.classList.add('text-success')
-      })
-      */
-      
+
+
+
+      const btns = document.querySelectorAll("#btnPlayer");
+btns.forEach(element => {
+  element.addEventListener('click', function() {
+    element.classList.add('text-success');
+  });
+});
+
       
       
       </script>
