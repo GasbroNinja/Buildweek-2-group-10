@@ -36,6 +36,31 @@
         background: #555; 
       }
 
+      button, a, i, svg{
+        color: rgb(28, 28, 28);
+      }
+
+      button:hover, a:hover, i:hover, svg:hover{
+        color: #e2e2e2;
+      }
+
+      button svg,
+      a svg{
+        fill: currentcolor;
+        pointer-events: none;
+      }
+
+      button i,
+      a i{
+        color: currentcolor;
+        pointer-events: none;
+      }
+
+      button svg:hover, button i:hover, a i:hover,
+      a svg:hover {
+        color: rgb(151, 44, 44);
+      }
+
       .BgColour {
       color: rgb(37, 37, 37);
       transition: all 1s;
@@ -634,7 +659,7 @@
         </div>
       </div>
 
-      
+
   
     </div>
   
