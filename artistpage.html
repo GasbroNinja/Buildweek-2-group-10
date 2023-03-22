@@ -10,14 +10,38 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/circular-font.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    html {
+      background-color: #343434;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #474646;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #302e2e;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #181717;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid position-absolute">
     <div class="row">
-      <div class="col-2 bg-black text-white">
-        <div id="sidebarStop" class="fixed-top ms-2 mb-1 z-1 bg-black text-white border-bottom border-light"
-          style="width: 205.59px;">
+
+      <div class="col-md-2 d-none d-md-block bg-black text-white">
+        <div id="sidebarStop" class="ms-2 mb-1 text-white border-bottom border-light">
           <div id="home" class="my-3">
             <div class="d-flex">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -84,152 +108,181 @@
           </div>
         </div>
 
-        <!--PLACEHOLDER SIDEBAR-->
-        <div id="sidebarStop" class="opacity-0"
-        style="width: 205.59px;">
-        <div id="home" class="my-3">
-          <div class="d-flex">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-house-door my-1 me-2" viewBox="0 0 16 16">
-              <path
-                d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z" />
-            </svg>
+        <div id="sidebarScroll" style="height: calc(100vh - 200px);" class="my-3 opacity-75 overflow-auto">
 
-            <a href="homepage.html" class="link-light text-decoration-none">Home</a>
+          <div>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
 
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
 
-          </div>
-          <div class="d-flex mt-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-search my-1 me-2" viewBox="0 0 16 16">
-              <path
-                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-            </svg>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
 
-            <a href="" class="link-light text-decoration-none">Cerca</a>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
 
-          </div>
-          <div class="d-flex mt-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-collection my-1 me-2" viewBox="0 0 16 16">
-              <path
-                d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z" />
-            </svg>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
 
-            <a href="album.html" class="link-light text-decoration-none">La tua libreria</a>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
 
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
 
-          </div>
-        </div>
-        <div id="playlist" class="mt-4 mb-3">
-          <div class="d-flex">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-plus-square my-1 me-2" viewBox="0 0 16 16">
-              <path
-                d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
-              <path
-                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-            </svg>
-            <a href="" class="link-light text-decoration-none">Crea playlist</a>
-          </div>
-          <div class="d-flex mt-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-suit-heart-fill my-1 me-2" viewBox="0 0 16 16">
-              <path
-                d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
-            </svg>
-            <a href="" class="link-light text-decoration-none">Brani che ti piacciono</a>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
 
-          </div>
-          <div class="d-flex my-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-bookmark-fill my-1 me-2" viewBox="0 0 16 16">
-              <path
-                d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z" />
-            </svg>
-            <a href="" class="link-light text-decoration-none ">I tuoi episodi</a>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
 
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+
+            <p>Lorem ipsum dolor sit amet.</p>
           </div>
         </div>
+
+
       </div>
 
-
-        <div id="sidebarScroll" data-bs-spy="scroll" class="my-3 opacity-75">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-
-          <p>Lorem ipsum dolor sit amet.</p>
-
+      <div class="col-md-8 p-0">
+        <div class=" fixed-top bg-image z-n1"
+          style="background-image: url(assets/imgs/main/imagesyellowcard.jpg); height: 40vh; ">
 
         </div>
-      </div>
 
-      <div class="col-8"></div>
-      <div class="col-2 bg-black text-white align-items-center">
+        <div class="d-flex flex-column p-2 bg-transparent z-0 text-white overflow-y-auto overflow-x-hidden"
+          style="height: 100vh;">
+          <div class="d-flex bg-transparent align-items-end p-0" style="height:40vh;">
+            <div>
+              <div class="d-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-patch-check-fill mx-1 mt-1" viewBox="0 0 16 16">
+                  <path
+                    d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
+                </svg>
+                <p>Artista verificato</p>
+              </div>
+              <h1 class="fw-bold" style="font-size: 5rem;">Yellowcard</h1>
+              <p class="">3.433.158 ascoltatori mensili</p>
+            </div>
+          </div>
+
+
+          <div class=" bg-transparent p-0 m-0" style="height: 50vh">
+            <div class="d-flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" fill="currentColor"
+                class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
+              </svg>
+              <button type="button" class="btn btn-outline-light mx-4">FOLLOWING</button>
+              <p class="fs-4">...</p>
+            </div>
+            <h3>Popolari</h3>
+            <div class="popular">
+              <div class="row">
+                <div class="col-md-4 col-12 d-flex">
+                  <p>1</p>
+                  <img src="assets/imgs/main/image-12.jpg" alt="" class="mx-3" style=" height:35px">
+                  <p>Ocean Avenue</p>
+                </div>
+                <div class="col-md-4">123.456.789</div>
+                <div class="col-md-4 d-none d-md-block">3:19</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-12 d-flex">
+                  <p>1</p>
+                  <img src="assets/imgs/main/image-12.jpg" alt="" class="mx-3" style=" height:35px">
+                  <p>Ocean Avenue</p>
+                </div>
+                <div class="col-md-4 d-none d-md-block">123.456.789</div>
+                <div class="col-md-4 d-none d-md-block">3:19</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-12 d-flex">
+                  <p>1</p>
+                  <img src="assets/imgs/main/image-12.jpg" alt="" class="mx-3" style=" height:35px">
+                  <p>Ocean Avenue</p>
+                </div>
+                <div class="col-md-4 d-none d-md-block">123.456.789</div>
+                <div class="col-md-4 d-none d-md-block">3:19</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-12 d-flex">
+                  <p>1</p>
+                  <img src="assets/imgs/main/image-12.jpg" alt="" class="mx-3" style=" height:35px">
+                  <p>Ocean Avenue</p>
+                </div>
+                <div class="col-md-4 d-none d-md-block">123.456.789</div>
+                <div class="col-md-4 d-none d-md-block">3:19</div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4 col-12 d-flex">
+                  <p>1</p>
+                  <img src="assets/imgs/main/image-12.jpg" alt="" class="mx-3" style=" height:35px">
+                  <p>Ocean Avenue</p>
+                </div>
+                <div class="col-md-4 d-none d-md-block">123.456.789</div>
+                <div class="col-md-4 d-none d-md-block">3:19</div>
+              </div>
+
+
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col-md-2 d-none d-md-block bg-black text-white align-items-center">
         <div class="d-flex justify-content-between">
           <div>
             <h5>Attività amici</h5>
           </div>
           <div class="d-flex">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
-              <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-              <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus"
+              viewBox="0 0 16 16">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+              <path fill-rule="evenodd"
+                d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
             </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+              viewBox="0 0 16 16">
+              <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
             </svg>
-            
+
           </div>
         </div>
-       <div class="p-2 ">
-        <div class="d-flex">
-          <img src="assets/imgs/avatar.jpeg" alt="" class="rounded-circle me-2 mt-2" style="width: 25px; height: 25px;">
-          <div class="opacity-75">
-            <p class="p-0 m-0">Chalie Hookhan</p>
-            <p class="p-0 m-0">In camera</p>
+        <div class="p-2 ">
+          <div class="d-flex">
+            <img src="assets/imgs/avatar.jpeg" alt="" class="rounded-circle me-2 mt-2"
+              style="width: 25px; height: 25px;">
+            <div class="opacity-75">
+              <p class="p-0 m-0">Chalie Hookhan</p>
+              <p class="p-0 m-0">In camera</p>
 
-            <p class="p-0 m-0">EP</p>
+              <p class="p-0 m-0">EP</p>
+            </div>
           </div>
-       </div>
 
+        </div>
       </div>
+
     </div>
 
+
   </div>
-
-
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
@@ -237,4 +290,3 @@
 </body>
 
 </html>
-
