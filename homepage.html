@@ -35,6 +35,20 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #555; 
       }
+
+      .BgColour {
+      color: rgb(37, 37, 37);
+      transition: all 1s;
+      background-color: rgb(0, 0, 0);
+      }
+
+      #navbar{
+        position: fixed;
+        z-index: 1;
+        width: 1103px;
+        top: 0;
+      }
+
     </style>
   </head>
   <body>
@@ -151,14 +165,15 @@
             
           
         </div>
-  
-        <div class="col-8 vh-100 mh-100 p-0 overflow-auto" style="background-color: #343434; height: calc(100vh - 0px);" >
 
+        <div class="col-8 vh-100 mh-100 p-0 overflow-auto" style="background-color: #343434;" id="homePage">
 
-          <div class="container-fluid pt-3 vh-100 mh-100" style="background-color: #343434; font-family: 'Circular'; font-weight: 400;">
-            <div class="container" id="navbar">
-              <div class="row d-grid gap-2 d-flex mt-3 align-items-center justify-content-spacearound mb-4">
-                <div class="col-md-3 col-lg-2 ps-4 pe-0">
+          
+          <div class="navbar w-100">
+            <div class="navbar px-0" id="navbar">
+              
+              <div class="row d-grid gap-2 d-flex mt-3 align-items-center justify-content-spacearound mb-4 w-100">
+                <div class="col-md-3 col-lg-2 ps-4 pe-0 d-flex">
                   <button class="btn btn-dark me-2 rounded rounded-5 fw-bold fs-6" style="color: #7f7f7f;" type="button"><i class="bi bi-chevron-left fs-5"></i></button>
                   <button class="btn btn-dark rounded rounded-5 fw-bold fs-6" style="color: #7f7f7f;" type="button"><i class="bi bi-chevron-right fs-5"></i></button>
                 </div>
@@ -175,7 +190,11 @@
                 </div>
               </div>
             </div>
-            <div class="container p-3 mb-3" style="background: linear-gradient(20deg, rgba(0,0,0,1) 0%, rgba(45,45,45,1) 61%, rgba(47,47,47,1) 67%, rgba(52,52,52,1) 93%);">
+          </div>
+          
+          <div class="container-fluid pt-3" style="background-color: #343434; font-family: 'Circular'; font-weight: 400; height: calc(100vh - 0px); margin-top: 84px; position: relative;">
+
+            <div class="container p-3 mb-3 mt-5" style="background: linear-gradient(20deg, rgba(0,0,0,1) 0%, rgba(45,45,45,1) 61%, rgba(47,47,47,1) 67%, rgba(52,52,52,1) 93%);">
               <div class="row d-flex py-4">
                 <div class="col-3 ps-4 d-flex align-items-center">
                   <img class=" d-flex align-items-center w-100 h-xxl-100 h-xl-100 h-lg-75 mt-lg-3 mt-md-5" style="object-fit: cover;" src="assets/imgs/search/avatar-giovent-brucata.webp" alt="">
@@ -628,5 +647,20 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+    function scrollValue() {
+      let containerNav = document.getElementById('homePage')
+      let navbar = document.getElementById('navbar');
+      let scroll = window.scrollY;
+      if (scroll < 50) {
+          navbar.classList.remove('BgColour');
+      } else {
+          navbar.classList.add('BgColour');
+      }
+    }
+    document.addEventListener('scroll', scrollValue);
+
+    </script>
   </body>
 </html>
