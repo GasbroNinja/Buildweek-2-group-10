@@ -662,12 +662,22 @@
 
 
 
+      //+++++ FUNZIONCINA ACTIVE/DESABLE COLOR GREEN AT BUTTON  ++++++++++ //
+
       const btns = document.querySelectorAll("#btnPlayer");
 btns.forEach(element => {
+  let clickCount = 0;
   element.addEventListener('click', function() {
-    element.classList.add('text-success');
+    if (clickCount % 2 === 0) {
+      element.classList.add('text-success');
+    } else {
+      element.classList.remove('text-success');
+    }
+    clickCount++;
   });
 });
+
+
 
       
       
