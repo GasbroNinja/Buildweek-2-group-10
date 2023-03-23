@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" sizes="32x32" type="image/png" href="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png">
+    <title>Homepage</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/circular-font.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+      html{
+        background-color: #343434;
+      }
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      
+      
+      ::-webkit-scrollbar-thumb {
+        background: #888; 
+      }
+
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+
+      button, a, i, svg{
+        color: rgb(28, 28, 28);
+      }
+
+      button:hover, a:hover, i:hover, svg:hover{
+        color: #e2e2e2;
+      }
+
+      button svg,
+      a svg{
+        fill: currentcolor;
+        pointer-events: none;
+      }
+
+      button i,
+      a i{
+        color: currentcolor;
+        pointer-events: none;
+      }
+
+      button svg:hover, button i:hover, a i:hover,
+      a svg:hover {
+        color: rgb(255, 255, 255);
+      }
+
+      .BgColour {
+      color: rgb(37, 37, 37);
+      transition: all 1s;
+      background-color: rgb(0, 0, 0);
+      }
+
+      #navbar{
+        position: fixed;
+        z-index: 1;
+        width: 66.22%;
+        top: 0;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!------------- DESKTOP VERSION  -------------------->
+
+    <div class="container-fluid position-fixed" style="background-color: #343434;">
+      <div class="row">
+        <div class="col-md-2 d-none d-md-block bg-black text-white">
+          <div id="sidebarStop" class="ms-2 mb-1 text-white border-bottom border-light">
+            <div id="home" class="my-3">
+              <div class="d-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-house-door my-1 me-2" viewBox="0 0 16 16">
+                  <path
+                    d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z" />
+                </svg>
+  
+                <a href="homepage.html" class="link-light text-decoration-none">Home</a>
+  
+  
+              </div>
+              <div class="d-flex mt-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-search my-1 me-2" viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>
+  
+                <a href="" class="link-light text-decoration-none">Cerca</a>
+  
+              </div>
+              <div class="d-flex mt-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-collection my-1 me-2" viewBox="0 0 16 16">
+                  <path
+                    d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z" />
+                </svg>
+  
+                <a href="album.html" class="link-light text-decoration-none">La tua libreria</a>
+  
+  
+              </div>
+            </div>
+            <div id="playlist" class="mt-4 mb-3">
+              <div class="d-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-plus-square my-1 me-2" viewBox="0 0 16 16">
+                  <path
+                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                </svg>
+                <a href="" class="link-light text-decoration-none">Crea playlist</a>
+              </div>
+              <div class="d-flex mt-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-suit-heart-fill my-1 me-2" viewBox="0 0 16 16">
+                  <path
+                    d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
+                </svg>
+                <a href="" class="link-light text-decoration-none">Brani che ti piacciono</a>
+  
+              </div>
+              <div class="d-flex my-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-bookmark-fill my-1 me-2" viewBox="0 0 16 16">
+                  <path
+                    d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z" />
+                </svg>
+                <a href="" class="link-light text-decoration-none ">I tuoi episodi</a>
+  
+              </div>
+            </div>
+          </div>
+  
+          <div id="sidebarScroll" style="height: calc(100vh - 200px);" class="my-3 opacity-75 overflow-auto">
+  
+            <div>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+  
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+  
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+  
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+  
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+  
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+  
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+  
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+  
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+  
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+  
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+  
+  
+        </div>
+
+
+        <div class="col-8 vh-100 mh-100 p-0 d-none d-md-block overflow-auto" style="background-color: #343434;" id="searchPage">
+
+          
+            <div class="navbar d-none d-md-block w-100">
+                <div class="navbar px-0" id="navbar">
+                
+                    <div class="row d-grid gap-2 d-flex mt-3 align-items-center justify-content-spacearound mb-4 w-100">
+                        <div class="col-md-3 col-lg-2 ps-4 pe-0 d-flex">
+                        <button class="btn btn-dark me-2 rounded rounded-5 fw-bold fs-6" style="color: #7f7f7f;" type="button"><i class="bi bi-chevron-left fs-5"></i></button>
+                        <button class="btn btn-dark rounded rounded-5 fw-bold fs-6" style="color: #7f7f7f;" type="button"><i class="bi bi-chevron-right fs-5"></i></button>
+                        </div>
+                        <div class="col-md-3 col-lg-5 col-xxl-5 px-0 d-flex">
+                            <form class="d-flex w-100"  role="search">
+                                <button class="btn btn-lg ms-3 me-2 ms-md-0 rounded rounded-4 p-2 fw-bold text-dark fs-6 border border-2 border-secondary" type="submit"><i class="ms-2 bi bi-search mx-3 mx-md-1 fs-4 w-25 text-secondary"></i></button>
+                                <input class="form-control mx-0 w-100 rounded rounded-5 py-0" type="search" placeholder="Cosa vuoi ascoltare" aria-label="Search">
+                                
+                            
+                            </form>
+
+                        </div>
+
+                        <div class="col-md-4 ms-md-auto ms-auto col-lg-3 col-xxl-4 d-flex justify-content-end px-0 mt-0">
+                            <span class="badge rounded-pill text-bg-dark d-flex ps-3 fs-5 position-relative"
+                                ><img
+                                class="rounded rounded-5 position-absolute top-50 start-25 translate-middle"
+                                width="32px"
+                                height="auto"
+                                src="assets/imgs/avatar.jpeg"
+                                alt="avatar"
+                                />&nbsp;&nbsp;&nbsp;&nbsp;Lidia Nautilus ...<i class="bi bi-caret-down-fill ps-3"></i>
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+          
+            <div id="refScroll" class="container-fluid d-none d-md-block pt-3" style="background-color: #343434; font-family: 'Circular'; font-weight: 400; height: calc(100vh - 0px); margin-top: 84px; position: relative;">
+                    <div class="container my-3 d-flex justify-content-start">
+                        <h2 class="text-light text-center mt-3">Sfoglia tutto</h2>
+                    </div>
+                    <div class="row row-cols-md-4 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-5 g-4 d-flex align-items-center mb-5">
+
+                        <div class="col">
+                          <div class="card h-100 border-5" style="background-color: #c09532;">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Album</h5>
+                            </div>
+                            <img src="assets/imgs/search/image-2.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #c09532; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border-5" style="background-color: #32bec0;">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Album</h5>
+                            </div>
+                            <img src="assets/imgs/search/image-3.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #32bec0; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border-5" style="background-color: #558f29;">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Album</h5>
+                            </div>
+                            <img src="assets/imgs/search/image-4.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #558f29; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border-5" style="background-color: #a62727;">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Album</h5>
+                            </div>
+                            <img src="assets/imgs/search/image-5.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #a62727; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 border-5" style="background-color: #9b216c;">
+                              <div class="card-body">
+                                  <h5 class="card-title text-center">Album</h5>
+                              </div>
+                              <img src="assets/imgs/search/image-6.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #9b216c; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                            </div>
+                          </div>
+                        <div class="col">
+                          <div class="card h-100 border-5" style="background-color: #c09532;">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Album</h5>
+                            </div>
+                            <img src="assets/imgs/search/image-2.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #c09532; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border-5" style="background-color: #32bec0;">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Album</h5>
+                            </div>
+                            <img src="assets/imgs/search/image-3.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #32bec0; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border-5" style="background-color: #558f29;">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Album</h5>
+                            </div>
+                            <img src="assets/imgs/search/image-4.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #558f29; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border-5" style="background-color: #a62727;">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Album</h5>
+                            </div>
+                            <img src="assets/imgs/search/image-5.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #a62727; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 border-5" style="background-color: #9b216c;">
+                              <div class="card-body">
+                                  <h5 class="card-title text-center">Album</h5>
+                              </div>
+                              <img src="assets/imgs/search/image-6.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #9b216c; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                            </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border-5" style="background-color: #c09532;">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Album</h5>
+                            </div>
+                            <img src="assets/imgs/search/image-2.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #c09532; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border-5" style="background-color: #32bec0;">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Album</h5>
+                            </div>
+                            <img src="assets/imgs/search/image-3.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #32bec0; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border-5" style="background-color: #558f29;">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Album</h5>
+                            </div>
+                            <img src="assets/imgs/search/image-4.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #558f29; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border-5" style="background-color: #a62727;">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Album</h5>
+                            </div>
+                            <img src="assets/imgs/search/image-5.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #a62727; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 border-5" style="background-color: #9b216c;">
+                              <div class="card-body">
+                                  <h5 class="card-title text-center">Album</h5>
+                              </div>
+                              <img src="assets/imgs/search/image-6.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #9b216c; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                            </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border-5" style="background-color: #c09532;">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Album</h5>
+                            </div>
+                            <img src="assets/imgs/search/image-2.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #c09532; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border-5" style="background-color: #32bec0;">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Album</h5>
+                            </div>
+                            <img src="assets/imgs/search/image-3.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #32bec0; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border-5" style="background-color: #558f29;">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Album</h5>
+                            </div>
+                            <img src="assets/imgs/search/image-4.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #558f29; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border-5" style="background-color: #a62727;">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Album</h5>
+                            </div>
+                            <img src="assets/imgs/search/image-5.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #a62727; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 border-5" style="background-color: #9b216c;">
+                              <div class="card-body">
+                                  <h5 class="card-title text-center">Album</h5>
+                              </div>
+                              <img src="assets/imgs/search/image-6.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #9b216c; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                            </div>
+                        </div>
+                      
+                        <div class="col">
+                          <div class="card h-100 border-5" style="background-color: #c09532;">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Album</h5>
+                            </div>
+                            <img src="assets/imgs/search/image-2.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #c09532; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border-5" style="background-color: #32bec0;">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Album</h5>
+                            </div>
+                            <img src="assets/imgs/search/image-3.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #32bec0; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border-5" style="background-color: #558f29;">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Album</h5>
+                            </div>
+                            <img src="assets/imgs/search/image-4.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #558f29; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border-5" style="background-color: #a62727;">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Album</h5>
+                            </div>
+                            <img src="assets/imgs/search/image-5.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #a62727; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 border-5" style="background-color: #9b216c;">
+                              <div class="card-body">
+                                  <h5 class="card-title text-center">Album</h5>
+                              </div>
+                              <img src="assets/imgs/search/image-6.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #9b216c; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+            
+        
+            </div>
+          
+                  <footer class="pe-3 overflow-x-hidden d-none d-md-block" style="height: auto; margin-top: 100vh; margin-bottom: 140px;">
+                    <div class="container-fluid mx-3">
+                      <div class="row row-cols-3 d-flex">
+                        <div class="col-2 col-md-3 col-lg-2 d-flex justify-content-start">
+                          <div class="text-light">
+                            <h5 class="text-light opacity-100 mb-3">Azienda</h5>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Chi siamo</p></a>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Opportunità di lavoro</p></a>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">For the Record</p></a>
+                          </div>
+                        </div>
+                        <div class="col-2 col-md-3 col-lg-2 d-flex justify-content-start">
+                          <div class="text-light">
+                            <h5 class="text-light opacity-100 mb-3">Community</h5>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Per artisti</p></a>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Sviluppatori</p></a>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Pubblicità</p></a>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Investitori</p></a>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Venditori</p></a>
+                          </div>
+                        </div>
+                        <div class="col-2 col-md-3 col-lg-2 d-flex justify-content-start">
+                          <div class="text-light">
+                            <h5 class="text-light opacity-100 mb-3">Link Utili</h5>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Assistenza</p></a>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">App per cellulare gratuita</p></a>
+                            <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Diritti del consumatore</p></a>
+            
+                          </div>
+                        </div>
+                        <div class="col-2 col-md-1 d-flex justify-content-end align-items-start flex-grow-1">
+            
+                          <button class="btn btn-dark me-2 rounded rounded-5 fw-bold fs-6" style="color: #7f7f7f;" type="button">
+            
+                            <a class="text-decoration-none text-light opacity-50" href="#"><i class="bi bi-instagram"></i></a>
+            
+                          </button>
+                          <button class="btn btn-dark me-2 rounded rounded-5 fw-bold fs-6" style="color: #7f7f7f;" type="button">
+            
+                            <a class="text-decoration-none text-light opacity-50" href="#"><i class="bi bi-twitter"></i></a>
+            
+                          </button>
+                          <button class="btn btn-dark me-2 rounded rounded-5 fw-bold fs-6" style="color: #7f7f7f;" type="button">
+            
+                            <a class="text-decoration-none text-light opacity-50" href="#"><i class="bi bi-facebook"></i></a>
+            
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <hr class="text-secondary opacity-75 ms-3">
+                      <div class="row row-cols-2 d-flex ms-3">
+                        <div class="col-2 d-flex justify-content-start ps-0 pe-1">
+                          <span class="opacity-50 text-light">Informazioni legali</span>
+                        </div>
+                        <div class="col-2 d-flex justify-content-start ps-0 pe-1">
+                          <span class="opacity-50 text-light">Centro sulla privacy</span>
+                        </div>
+                        <div class="col-2 d-flex justify-content-start ps-0 pe-1">
+                          <span class="opacity-50 text-light">Informativa sulla privacy</span>
+                        </div>
+                        <div class="col-2 d-flex justify-content-start ps-0 pe-1">
+                          <span class="opacity-50 text-light">Impostazioni cookie</span>
+                        </div>
+                        <div class="col-2 d-flex justify-content-start ps-0 pe-1">
+                          <span class="opacity-50 text-light">Info annunci</span>
+                        </div>
+                        <div class="col-2 d-flex flex-grow justify-content-end">
+                          <h6 class="text-light opacity-75">© 2023 Spotify AB</h6>
+                        </div>
+                      </div>
+                  </footer>
+                
+      
+      
+      
+          
+      
+
+
+        </div>
+        <div class="col-md-2 d-none d-md-block bg-black text-white align-items-center">
+          <div class="d-flex justify-content-between">
+            <div>
+              <h5>Attività amici</h5>
+            </div>
+            <div class="d-flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus"
+                viewBox="0 0 16 16">
+                <path
+                  d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                <path fill-rule="evenodd"
+                  d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                viewBox="0 0 16 16">
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+              </svg>
+  
+            </div>
+          </div>
+          <div class="p-2 ">
+            <div class="d-flex">
+              <img src="assets/imgs/avatar.jpeg" alt="" class="rounded-circle me-2 mt-2"
+                style="width: 25px; height: 25px;">
+              <div class="opacity-75">
+                <p class="p-0 m-0">Chalie Hookhan</p>
+                <p class="p-0 m-0">In camera</p>
+  
+                <p class="p-0 m-0">EP</p>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+
+
+  
+    </div>
+  
+
+
+
+
+    <div class="fixed-bottom container-fluid d-none d-md-block bg-dark">
+      <div class="row flex-nowrap d-flex">
+        <!----------------------------------------     PRIMA COL -->
+        <div class="p-3 col-3 d-flex justify-content-start align-items-center">
+          <img src="assets/imgs/search/image-12.jpg" alt="" width="60" height="60" />
+          <div class="align-items-center d-flex flex-column ms-3">
+            <p class="mb-0 fw-bold text-light">Fat Funny Friend</p>
+            <p class="text-start mb-0 text-light">Maddie Zahm</p>
+          </div>
+          <div class="d-flex ps-3">
+            <a href="#" class="text-decoration-none">
+              <i class="ms-2 bi bi-heart fs-2"></i></a>
+          </div>
+        </div>
+        <!-- ++++++++++++            seconda col          ++++++++++-->
+        <div class="col-6 d-flex justify-content-center container-fluid align-items-center ms-5 p-3">
+          <div class="align-items-center d-flex flex-column">
+            
+            <div class="d-flex align-items-center">
+              <!-- ++++++++++++++++++++++      ARROW shuffle-------riproduzione casuale         ++++++++ -->
+              <button class="bg-transparent border-0 fs-4">
+                <i id="btnPlayer" class="bi bi-shuffle"></i>
+              </button>
+              <!-- ++++++++++++++++++++++      ARROW Left          ++++++++ -->
+              <button class="bg-transparent border-0 fs-3">
+                <i class="bi bi-skip-start-fill"></i>
+              </button>
+              <!-- ++++++++++++++++++++++    play         ++++++++ -->
+              <button id="playPlayer btnPlayer" class="rounded-circle border-0">
+                <svg
+                  role="img"
+                  height="40"
+                  width="30"
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                  data-encore-id="icon"
+                  fill="white"
+                  
+                >
+                  <path
+                    d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"
+                  ></path>
+                </svg>
+              </button>
+              <!-- ++++++++++++++++++++++      ARROW Right          ++++++++ -->
+              <button class="bg-transparent border-0 fs-3">
+                <i class="bi bi-skip-end-fill "></i>
+              </button>
+              <!-- ++++++++++++++++++++++       ARROW ROLE       ++++++++ -->
+              <button class="bg-transparent border-0 fs-4">
+                <i id="btnPlayer" class="bi bi-repeat"></i>
+              </button>
+            </div>
+            <!-- +++++++++++++++++++++++++            PROGRESS BAR                +++++++++++++++++++++++++++++ -->
+            <div class="playback-bar d-flex mt-3 text-light">
+              <div
+                data-testid="playback-position"
+                class="mx-2"
+                data-encore-id="type"
+                
+              >
+                1:07
+              </div>
+              <div class="" data-testid="playback-progressbar">
+                <label class="hidden-visually">
+                  <!-- gestire le misure della progresse bar in larghezza -->
+                  <input
+                    style="min-width: 45vw"
+                    type="range"
+                    min="0"
+                    max="200"
+                    step="5"
+                    aria-valuetext="1:07/2:43"
+                    value="80"
+                    
+                /></label>
+                <div
+                  class="TywOcKZEqNynWecCiATc"
+                  data-testid="progress-bar"
+                  style="--progress-bar-transform: 41.1043%"
+                >
+                  <div class="NoOAOv6U6vtqj_ybS1Cd" data-testid="progress-bar-background">
+                    <div class="w699O0LgQRghXyl3bs9u"><div class="epWhU7hHGktzlO_dop6z"></div></div>
+                    <div class="Vis45PPawTyED7Lt2_LI"></div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-testid="playback-duration"
+                data-test-position="67930"
+                class="Type__TypeElement-sc-goli3j-0 fyaNJr npFSJSO1wsu3mEEGb5bh ms-2"
+                data-encore-id="type"
+                style="color: rgb(255, 255, 255)"
+              >
+                2:43
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ++++++++++++          terza col       ++++++++++-->
+        <div class="col-auto d-flex align-items-center">
+          <!-- microphone -->
+          <button class="bg-transparent border-0 fs-5">
+            <i id="btnPlayer" class="bi bi-mic"></i>
+          </button>
+          <!-- +++++++++++++++++++++++++++     menù hamburgher -+++++++++++++++-->
+          <button class="bg-transparent border-0 fs-5">
+            <i id="btnPlayer" class="bi bi-list"></i>
+          </button>
+          <!--+++++++++++++++++++++++    hi fi audio     +++++++++++++++++++++++++++ -->
+          <button id class="bg-transparent border-0 fs-5">
+            <i id="btnPlayer" class="bi bi-pc-display"></i>
+          </button>
+          <!--+++++++++++++++++++++++++++++++++    volume      +++++++++++++++++-->
+          <button class="bg-transparent border-0 fs-4">
+            <i id="btnPlayer" class="bi bi-volume-down"></i>
+          </button>
+          <!-- +++++++++++++++++     volume progress bar ++++++++-->
+          <div class="col-6 col-md-5 d-flex">
+            <input
+              style="width: 5vw"
+              type="range"
+              id="greenClick"
+              name="cowbell"
+              min="0"
+              max="100"
+              value="90"
+              step="10"
+              
+            />
+            
+          </div>
+          <!--+++++++++++++++++ Arrows expand +++++++++++++++-->
+          <div><i class="ms-0 mx-5 bi bi-arrows-angle-expand"></i></div>
+        </div>
+      </div>
+    </div>
+    <!--++++++++++++++++++++++++++++++++++++++++++++             BOTTOM BAR fine     +++++++++++++++++++++++++++++++++++++-->
+    </div>
+
+
+
+    <!------------- MOBILE VERSION  -------------------->
+
+    <div class="container-fluid h-100 w-100" style="background-color: #202020;">
+      <div class="container-fluid mb-5 mx-0 pt-5 px-0 d-flex flex-column align-items-start justify-content-start">
+            <h2 class="text-light text-start ps-4 mb-5">Cerca</h2>
+            <div class="col-12 px-0 d-flex justify-content-start">
+                <form class="d-flex w-100"  role="search">
+                    <button class="btn btn-lg ms-4 me-2 ms-md-0 rounded rounded-4 p-2 fw-bold text-dark fs-6 border border-2 border-secondary" type="submit"><i class="bi bi-search mx-2 fs-4 w-25 text-secondary"></i></button>
+                    <input class="form-control mx-0 w-100 rounded rounded-5 py-0" type="search" placeholder="Cosa vuoi ascoltare" aria-label="Search">
+                    
+                
+                </form>
+
+            </div>
+            
+            <div class="container my-3 d-flex justify-content-center">
+            <h2 class="text-light text-center mt-3">Sfoglia tutto</h2>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 d-flex justify-content-center mt-5 d-block d-md-none">
+                <div class="col">
+                    <div class="card p-0 mb-3 w-100"  style="background-color: #c09532;">
+                        <div class="row g-0 d-flex">
+                            <div class="col-6">
+                                <div class="card-body p-0 ps-2">
+                                    <h5 class="card-title">Card title</h5>
+    
+    
+                                </div>
+                            </div>
+                            <div class="col-4 w-50 h-0">
+                            <img src="assets/imgs/search/image-2.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #c09532; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-0 mb-3 w-100"  style="background-color: #c09532;">
+                        <div class="row g-0 d-flex">
+                            <div class="col-6">
+                                <div class="card-body p-0 ps-2">
+                                    <h5 class="card-title">Card title</h5>
+    
+    
+                                </div>
+                            </div>
+                            <div class="col-4 w-50 h-0">
+                            <img src="assets/imgs/search/image-2.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #c09532; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-0 mb-3 w-100"  style="background-color: #c09532;">
+                        <div class="row g-0 d-flex">
+                            <div class="col-6">
+                                <div class="card-body p-0 ps-2">
+                                    <h5 class="card-title">Card title</h5>
+    
+    
+                                </div>
+                            </div>
+                            <div class="col-4 w-50 h-0">
+                            <img src="assets/imgs/search/image-2.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #c09532; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-0 mb-3 w-100"  style="background-color: #c09532;">
+                        <div class="row g-0 d-flex">
+                            <div class="col-6">
+                                <div class="card-body p-0 ps-2">
+                                    <h5 class="card-title">Card title</h5>
+    
+    
+                                </div>
+                            </div>
+                            <div class="col-4 w-50 h-0">
+                            <img src="assets/imgs/search/image-2.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #c09532; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-0 mb-3 w-100"  style="background-color: #c09532;">
+                        <div class="row g-0 d-flex">
+                            <div class="col-6">
+                                <div class="card-body p-0 ps-2">
+                                    <h5 class="card-title">Card title</h5>
+    
+    
+                                </div>
+                            </div>
+                            <div class="col-4 w-50 h-0">
+                            <img src="assets/imgs/search/image-2.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #c09532; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-0 mb-3 w-100"  style="background-color: #c09532;">
+                        <div class="row g-0 d-flex">
+                            <div class="col-6">
+                                <div class="card-body p-0 ps-2">
+                                    <h5 class="card-title">Card title</h5>
+    
+    
+                                </div>
+                            </div>
+                            <div class="col-4 w-50 h-0">
+                            <img src="assets/imgs/search/image-2.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #c09532; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-0 mb-3 w-100"  style="background-color: #c09532;">
+                        <div class="row g-0 d-flex">
+                            <div class="col-6">
+                                <div class="card-body p-0 ps-2">
+                                    <h5 class="card-title">Card title</h5>
+    
+    
+                                </div>
+                            </div>
+                            <div class="col-4 w-50 h-0">
+                            <img src="assets/imgs/search/image-2.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #c09532; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-0 mb-3 w-100"  style="background-color: #c09532;">
+                        <div class="row g-0 d-flex">
+                            <div class="col-6">
+                                <div class="card-body p-0 ps-2">
+                                    <h5 class="card-title">Card title</h5>
+    
+    
+                                </div>
+                            </div>
+                            <div class="col-4 w-50 h-0">
+                            <img src="assets/imgs/search/image-2.jpg" style="object-fit: cover; box-shadow: 3px 3px 20px #c09532; transform: rotate(0deg) translate(0%,0%);" class="card-img-top" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        
+
+
+
+
+          
+          
+
+
+      <footer class="container px-0 ms-0 d-blck d-md-none" style="height: auto; margin-top: 30vh; max-width: 97%;margin-bottom: 250px;">
+        <div class="container-fluid mx-3">
+          <div class="row row-cols-3 d-flex flex-column">
+            <div class="col-2 col-md-3 col-lg-2 d-flex justify-content-start ps-0">
+              <div class="text-light">
+                <h5 class="text-light opacity-100 mb-3">Azienda</h5>
+                <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Chi siamo</p></a>
+                <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Opportunità di lavoro</p></a>
+                <a class="text-decoration-none text-light" href="#"><p class="opacity-50">For the Record</p></a>
+              </div>
+            </div>
+            <div class="col-2 col-md-3 col-lg-2 d-flex justify-content-start ps-0">
+              <div class="text-light">
+                <h5 class="text-light opacity-100 mb-3">Community</h5>
+                <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Per artisti</p></a>
+                <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Sviluppatori</p></a>
+                <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Pubblicità</p></a>
+                <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Investitori</p></a>
+                <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Venditori</p></a>
+              </div>
+            </div>
+            <div class="col-2 col-md-3 col-lg-2 d-flex justify-content-start ps-0">
+              <div class="text-light">
+                <h5 class="text-light opacity-100 mb-3">Link Utili</h5>
+                <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Assistenza</p></a>
+                <a class="text-decoration-none text-light" href="#"><p class="opacity-50">App per cellulare gratuita</p></a>
+                <a class="text-decoration-none text-light" href="#"><p class="opacity-50">Diritti del consumatore</p></a>
+  
+              </div>
+            </div>
+            <div class="col-2 col-md-1 d-flex justify-content-end align-items-center mb-5 ms-5 ms-auto">
+  
+              <button class="btn btn-dark me-2 rounded rounded-5 fw-bold fs-6" style="color: #7f7f7f;" type="button">
+  
+                <a class="text-decoration-none text-light opacity-50" href="#"><i class="bi bi-instagram"></i></a>
+  
+              </button>
+              <button class="btn btn-dark me-2 rounded rounded-5 fw-bold fs-6" style="color: #7f7f7f;" type="button">
+  
+                <a class="text-decoration-none text-light opacity-50" href="#"><i class="bi bi-twitter"></i></a>
+  
+              </button>
+              <button class="btn btn-dark me-2 rounded rounded-5 fw-bold fs-6" style="color: #7f7f7f;" type="button">
+  
+                <a class="text-decoration-none text-light opacity-50" href="#"><i class="bi bi-facebook"></i></a>
+  
+              </button>
+            </div>
+          </div>
+        </div>
+        <hr class="text-secondary opacity-75 ms-3 w-100">
+          <div class="row d-inline-flex flex-wrap align-items-start flex-row flex-wrap ms-3 mb-5">
+            <div class="">
+              <p class="opacity-50 text-light">Informazioni legali</p>
+            </div>
+            <div class="">
+              <p class="opacity-50 text-light">Centro sulla privacy</p>
+            </div>
+            <div class="">
+              <p class="opacity-50 text-light">Informativa sulla privacy</p>
+            </div>
+            <div class="">
+              <p class="opacity-50 text-light">Impostazioni cookie</p>
+            </div>
+            <div class="">
+              <p class="opacity-50 text-light">Info annunci</p>
+            </div>
+            <div class="">
+              <h6 class="text-light opacity-75">© 2023 Spotify AB</h6>
+            </div>
+          </div>
+      </footer>
+    </div>
+
+    <div class="fixed-bottom d-blck d-md-none">
+
+        <!--PLAYER-->
+        <div class="row d-flex bg-dark rounded me-1 ms-1  my-1">
+          <div class="d-flex my-2 align-items-center">
+            <div style="width: 70px; height: 55px;" class="d-flex p-2"><!--IMG CANZONE--></div>
+            <p id="titolo" class="fs-4 mt-2 text-light me-auto">Titolo canzone</p>
+            <div class="d-flex">
+              <a id="btnPlayer" class="text-decoration-none d-flex "><i class="bi bi-music-player-fill display-3 mx-2 mt-1 " id="playerFill"></i></a>
+              <a id="btnPlayer" class="text-decoration-none d-flex "><i class="bi bi-suit-heart display-2 mx-2 mt-1 "></i></a>
+              <a id="btnPlayer" class="text-decoration-none d-flex "><i class="bi bi-play-fill display-1"></i></a>
+            </div>
+          </div>
+        </div>
+        <!--FINE PLAYER-->
+
+        <!--NAVBAR BOTTOM-->
+        <nav class="navbar bg-black bg-gradient opacity-75 text-white">
+          <div class="container-fluid d-flex justify-content-center">
+            <div class="row d-flex justify-content-between">
+              <div id="home" class="my-3 d-flex  text-white align-items-center">
+
+                <div class=" col-4 d-flex flex-column px-4 align-items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                    class="bi bi-house-door my-1 me-2" viewBox="0 0 16 16">
+                    <path
+                      d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z" />
+                  </svg>
+
+                  <a  href="homepage.html" class="link-light text-decoration-none">Home</a>
+
+
+                </div>
+                <div class=" col-4 d-flex flex-column mt-2 px-4 align-items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                    class="bi bi-search my-1 me-2" viewBox="0 0 16 16">
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                  </svg>
+
+                  <a  href="" class="link-light text-decoration-none">Cerca</a>
+
+                </div>
+                <div class=" col-4 d-flex flex-column mt-2 px-4 align-items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                    class="bi bi-collection my-1 me-2" viewBox="0 0 16 16">
+                    <path
+                      d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z" />
+                  </svg>
+
+                  <a  href="album.html" class="link-light text-decoration-none">La tua libreria</a>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+    </div>
+
+  
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+    
+    const btns = document.querySelectorAll("#btnPlayer");
+    btns.forEach(element => {
+      let clickCount = 0;
+      element.addEventListener('click', function () {
+        if (clickCount % 2 === 0) {
+          element.classList.add('text-success');
+        } else {
+          element.classList.remove('text-success');
+        }
+        clickCount++;
+      });
+    });
+
+      const containerNav = document.getElementById('refScroll')
+      const navbar = document.getElementById('navbar');
+
+    function scrollValue() {
+      let scroll = window.scrollY;
+
+      if (scroll < 50) {
+          navbar.classList.remove('BgColour');
+      } else {
+          navbar.classList.add('BgColour');
+      }
+    }
+    
+    containerNav.addEventListener('scroll', scrollValue);
+
+
+    </script>
+  </body>
+</html>
