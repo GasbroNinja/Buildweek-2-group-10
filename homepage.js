@@ -63,6 +63,72 @@ const createAlbum = async () => {
 
 }
 
+//MOBILE ALBUM CARD IN HOME
+
+
+const createAlbumMobile = async () => {
+  const row = document.getElementById("mobileAlbum");
+  try {
+      const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=a")
+
+      const selectedProduct = await response.json();
+
+      console.log(selectedProduct);
+
+      const randomIndex = Math.floor(Math.random() * selectedProduct.data.length);
+      console.log("Random Index: ", randomIndex);
+
+      const selectedAlbum = selectedProduct.data[randomIndex];
+
+      let roww = document.getElementById("mobileAlbum");
+      roww.innerHTML = '';
+
+      const col = document.createElement("div")
+      col.className = "row d-flex pt-4"
+      col.innerHTML = `
+      <div class="col-6 ps-4 d-flex align-items-center justify-content-center">
+          <img class="d-flex align-items-center w-100 h-100"
+            style="object-fit: cover; box-shadow: 3px 3px 20px rgb(207, 205, 205);"
+            src="${selectedAlbum.album.cover_big}" alt="">
+        </div>
+        <div class="col-6 d-flex flex-column justify-content-center">
+          <h6 class="text-light mb-3">Album</h6>
+          <p class="text-light fs-2" style="font-weight: 900;">${selectedAlbum.album.title}</p>
+          <p class=" text-light mb-3">${selectedAlbum.artist.name}</p>
+        </div>
+        <div class="col-12 mt-5 mb-2 d-flex gap-2 justify-content-between">
+          <div class="d-flex align-items-center">
+            <button class="btn btn-lg ms-3 rounded rounded-5 px-0 py-0 fw-bold text-success fs-6 border border-0"
+              type="button"><i class="ms-2 bi bi-heart fs-2"></i></button>
+            <button class="btn btn-lg ms-3 rounded rounded-5 px-0 py-0 fw-bold text-secondary fs-6 border border-0"
+              type="button"><i class="bi bi-three-dots-vertical fs-2"></i></button>
+          </div>
+          <div class="d-flex align-items-center">
+            <p class="text-light opacity-75 mb-0 pe-4">num brani</p>
+            <button id="playPlayer btnPlayer" class="bg-success rounded-circle px-2 me-3 border-0 fs-1">
+              <i class="bi bi-play-fill text-light"></i>
+            </button>
+          </div>
+        </div>
+      `;
+
+      row.appendChild(col);
+
+
+
+
+
+
+
+  } catch (error) {
+      console.log(error);
+  }
+
+}
+
+
+
+
 //FUNZIONE CARD PIU PICCOLE 
 
 const createCard = async (selectedAlbumCard) => {
@@ -83,9 +149,12 @@ const createCard = async (selectedAlbumCard) => {
       </div>
     </div>
     `;
+    
 
     row.appendChild(col);
 };
+
+
 
 const createCards = async () => {
     const row = document.getElementById("cardHome");
@@ -114,6 +183,32 @@ function shuffle(array) {
     return array;
 }
 
+const createCardsMobile = async () => {
+  const row2 = document.getElementById("cardMobileSmall");
+  row2.innerHTML = '';
+
+  try {
+      const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=a")
+      const selectedCard = await response.json();
+      console.log(selectedCard);
+
+      const shuffledData = shuffle(selectedCard.data);
+
+      for (let i = 0; i < shuffledData.length; i++) {
+          await createCard(shuffledData[i]);
+      }
+  } catch (error) {
+      console.log(error);
+  }
+};
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 
 
 /* +++++++++      +++++++   Carousel  ++++++++++     +++++++*/
@@ -162,6 +257,20 @@ const createCardCarousel2 = async (selectedAlbumCards) => {
 
 };
 
+/*
+const createCardCarouselMobile = async (selectedAlbumCards) => {
+  const row = document.getElementById("mobileVer");
+  const col = document.createElement("div");
+  col.className = "container-fluid  mb-5 mx-0 pt-5 px-0 d-flex align-items-center justify-content-start";
+  col.innerHTML = `
+  
+  `;
+
+  row.appendChild(col);
+
+};
+*/
+
 
 
 const createCardsCarousel = async () => {
@@ -194,14 +303,37 @@ function shuffle(array) {
     return array;
 }
 
+const createCardMobile = async (selectedAlbumCards) => {
+  const row = document.getElementById("cardMobileSmall");
+  const col = document.createElement("div");
+  col.className = "row row-cols-sm-2 row-cols-1 g-3";
+  col.innerHTML = `
+  <div class="col px-0 d-flex">
+    <img class="p-0 rounded rounded-1" width="75px" src="${selectedAlbumCards.album.cover_medium}" alt="">
+    <div class="col text-light d-flex align-items-center fw-semibold me-3" style="background-color: #2d2d2d;">
+      <span class="ps-2">${selectedAlbumCards.album.title}</span>
+    </div>
+
+  </div>
+  `;
+
+  
+  row.appendChild(col);
+  console.log(row.appendChild(col))
+};
+
 window.onload = function () {
 
     createAlbum();
+    
     createCard();
+
     createCards();
     createCardCarousel();
     createCardsCarousel();
-
+    createCardMobile();
+    createCardsMobile();
+    createAlbumMobile();
 }
 
 
