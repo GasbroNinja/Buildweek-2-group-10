@@ -321,7 +321,7 @@ const createCardMobile = async (selectedAlbumCards) => {
   const col = document.createElement("div");
   col.className = "row row-cols-sm-2 row-cols-1 g-3";
   col.innerHTML = `
-  <div class="col px-0 d-flex">
+  <div class = "col px-0 d-flex">
     <img class="p-0 rounded rounded-1" width="75px" src="${selectedAlbumCards.album.cover_medium}" alt="">
     <div class="col text-light d-flex align-items-center fw-semibold me-3" style="background-color: #2d2d2d;">
       <span class="ps-2">${selectedAlbumCards.album.title}</span>
