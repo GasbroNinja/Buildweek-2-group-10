@@ -1,4 +1,3 @@
-
 const URLParams = new URLSearchParams(window.location.search);
 const selectedId = URLParams.get("id");
 console.log("SELECTED ID: ", selectedId);
@@ -6,25 +5,25 @@ console.log("SELECTED ID: ", selectedId);
 //FUNZIONE CARD HEADER
 
 const createAlbum = async () => {
-    const row = document.getElementById("selected");
-    try {
-        const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=a")
+  const row = document.getElementById("selected");
+  try {
+    const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=a");
 
-        const selectedProduct = await response.json();
+    const selectedProduct = await response.json();
 
-        console.log(selectedProduct);
+    console.log(selectedProduct);
 
-        const randomIndex = Math.floor(Math.random() * selectedProduct.data.length);
-        console.log("Random Index: ", randomIndex);
+    const randomIndex = Math.floor(Math.random() * selectedProduct.data.length);
+    console.log("Random Index: ", randomIndex);
 
-        const selectedAlbum = selectedProduct.data[randomIndex];
+    const selectedAlbum = selectedProduct.data[randomIndex];
 
-        let roww = document.getElementById("selected");
-        roww.innerHTML = '';
+    let roww = document.getElementById("selected");
+    roww.innerHTML = "";
 
-        const col = document.createElement("div")
-        col.className = "container p-3 mb-3 mt-5"
-        col.innerHTML = `
+    const col = document.createElement("div");
+    col.className = "container p-3 mb-3 mt-5";
+    col.innerHTML = `
        
         <div class="row d-flex py-4">
         <div class="col-3 ps-4 d-flex align-items-center">
@@ -49,44 +48,34 @@ const createAlbum = async () => {
       
         `;
 
-        row.appendChild(col);
+    row.appendChild(col);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-      
-
-        
-
-
-
-    } catch (error) {
-        console.log(error);
-    }
-
-} 
-
-//FUNZIONE CARD PIU PICCOLE 
+//FUNZIONE CARD PIU PICCOLE
 
 const createCard = async () => {
-    const row = document.getElementById("cardHome");
-    try {
-        const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=a")
+  const row = document.getElementById("cardHome");
+  try {
+    const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=a");
 
-        const selectedCard = await response.json();
+    const selectedCard = await response.json();
 
-        console.log(selectedCard);
+    console.log(selectedCard);
 
-        const randomIndexCard = Math.floor(Math.random() * selectedCard.data.length);
-        console.log("Random Index: ", randomIndexCard);
+    const randomIndexCard = Math.floor(Math.random() * selectedCard.data.length);
+    console.log("Random Index: ", randomIndexCard);
 
-        const selectedAlbumCard = selectedCard.data[randomIndexCard];
-        
+    const selectedAlbumCard = selectedCard.data[randomIndexCard];
 
-        
-        let rowww = document.getElementById("cardHome");
-        rowww.innerHTML = '';
-         
-        const col = document.createElement("div")
-        col.className = "row row-cols-md-2 row-cols-lg-3 row-cols-xl-3 gap-3 mb-4"
-        col.innerHTML = `
+    let rowww = document.getElementById("cardHome");
+    rowww.innerHTML = "";
+
+    const col = document.createElement("div");
+    col.className = "row row-cols-md-2 row-cols-lg-3 row-cols-xl-3 gap-3 mb-4";
+    col.innerHTML = `
         <div class="row ps-0 pe-0 ms-0 rounded rounded-1 d-flex flex-column">
         <div class="col-md-4 col-lg-3 p-0">
           <img class="p-0 rounded rounded-1"  src="${selectedAlbumCard.album.cover_medium}" alt="">
@@ -100,33 +89,13 @@ const createCard = async () => {
 
         `;
 
-        row.appendChild(col);
-
-      
-        
-
-
-
-    } catch (error) {
-        console.log(error);
-    }
-
-} 
-
-
-
+    row.appendChild(col);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 window.onload = function () {
-    
-    
-    createAlbum()
-    createCard()
-}
-
-
-
-
-
-
-
-
+  createAlbum();
+  createCard();
+};

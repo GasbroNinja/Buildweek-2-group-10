@@ -1005,15 +1005,7 @@
                 </button>
                 <!-- ++++++++++++++++++++++    play         ++++++++ -->
                 <button id="playPlayer btnPlayer" class="rounded-circle border-0">
-                  <svg
-                    role="img"
-                    height="40"
-                    width="30"
-                    aria-hidden="true"
-                    viewBox="0 0 16 16"
-                    data-encore-id="icon"
-                    fill="white"
-                  >
+                  <svg role="img" height="40" width="30" aria-hidden="true" viewBox="0 0 16 16" data-encore-id="icon">
                     <path
                       d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"
                     ></path>
@@ -1029,42 +1021,8 @@
                 </button>
               </div>
               <!-- +++++++++++++++++++++++++            PROGRESS BAR                +++++++++++++++++++++++++++++ -->
-              <div class="playback-bar d-flex mt-3 text-light">
-                <div data-testid="playback-position" class="mx-2" data-encore-id="type">1:07</div>
-                <div class="" data-testid="playback-progressbar">
-                  <label class="hidden-visually">
-                    <!-- gestire le misure della progresse bar in larghezza -->
-                    <input
-                      style="min-width: 45vw"
-                      type="range"
-                      min="0"
-                      max="200"
-                      step="5"
-                      aria-valuetext="1:07/2:43"
-                      value="80"
-                  /></label>
-                  <div
-                    class="TywOcKZEqNynWecCiATc"
-                    data-testid="progress-bar"
-                    style="--progress-bar-transform: 41.1043%"
-                  >
-                    <div class="NoOAOv6U6vtqj_ybS1Cd" data-testid="progress-bar-background">
-                      <div class="w699O0LgQRghXyl3bs9u">
-                        <div class="epWhU7hHGktzlO_dop6z"></div>
-                      </div>
-                      <div class="Vis45PPawTyED7Lt2_LI"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  data-testid="playback-duration"
-                  data-test-position="67930"
-                  class="Type__TypeElement-sc-goli3j-0 fyaNJr npFSJSO1wsu3mEEGb5bh ms-2"
-                  data-encore-id="type"
-                  style="color: rgb(255, 255, 255)"
-                >
-                  2:43
-                </div>
+              <div class="col-6 mt-2 d-flex">
+                <input id="progressBar" style="width: 100vw" type="range" min="0" max="100" value="90" step="10" />
               </div>
             </div>
           </div>
@@ -1088,16 +1046,7 @@
             </button>
             <!-- +++++++++++++++++     volume progress bar ++++++++-->
             <div class="col-6 col-md-5 d-flex">
-              <input
-                style="width: 5vw"
-                type="range"
-                id="greenClick"
-                name="cowbell"
-                min="0"
-                max="100"
-                value="90"
-                step="10"
-              />
+              <input id="progressBarpiccola" style="width: 5vw" type="range" min="0" max="100" value="90" step="10" />
             </div>
             <!--+++++++++++++++++ Arrows expand +++++++++++++++-->
             <div><i class="ms-0 mx-5 bi bi-arrows-angle-expand"></i></div>
